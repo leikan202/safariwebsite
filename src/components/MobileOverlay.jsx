@@ -1,18 +1,39 @@
 import React from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { MessageSquare, X } from 'lucide-react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 
 export default function MobileOverlay({ isOpen, onClose }) {
   const { openDrawer } = useTripBuilder();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   if (!isOpen) return null;
 
   const handleLinkClick = (hash) => {
     onClose();
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate(`/${hash || ''}`);
+      setTimeout(() => {
+        if (hash && hash !== '#') {
+          const id = hash.replace('#', '');
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 120);
+    } else {
+      if (!hash || hash === '#') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
   };
@@ -30,11 +51,14 @@ export default function MobileOverlay({ isOpen, onClose }) {
         </button>
 
         <nav className="overlay-nav">
-          <a href="#destinations" className="overlay-link" onClick={() => handleLinkClick('#destinations')}>Safaris</a>
-          <a href="#services" className="overlay-link" onClick={() => handleLinkClick('#services')}>Destinations</a>
-          <a href="#why-us" className="overlay-link" onClick={() => handleLinkClick('#why-us')}>Why Us</a>
-          <a href="#social" className="overlay-link" onClick={() => handleLinkClick('#social')}>On Safari Now</a>
-          <a href="#faq" className="overlay-link" onClick={() => handleLinkClick('#faq')}>FAQ</a>
+          <a href="/" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick(''); }}>Home</a>
+          <Link to="/itineraries" className="overlay-link" onClick={onClose}>Safaris</Link>
+          <a href="/#destinations" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#destinations'); }}>Destinations</a>
+          <Link to="/4x4-landcruisers" className="overlay-link" onClick={onClose}>4x4 Fleet</Link>
+          <a href="/#our-story" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#our-story'); }}>Our Story</a>
+          <a href="/#why-us" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#why-us'); }}>Why Us</a>
+          <a href="/#contact" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#contact'); }}>Contact</a>
+          <Link to="/faq" className="overlay-link" onClick={onClose}>FAQ</Link>
         </nav>
 
         <div className="overlay-footer">

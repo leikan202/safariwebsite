@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTripBuilder } from '../context/TripBuilderContext';
 
 export default function Navbar({ onOpenMobileMenu }) {
   const [scrolled, setScrolled] = useState(false);
   const { openDrawer } = useTripBuilder();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     let ticking = false;
@@ -23,10 +25,43 @@ export default function Navbar({ onOpenMobileMenu }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e, hash) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate(`/${hash || ''}`);
+      setTimeout(() => {
+        if (hash && hash !== '#') {
+          const id = hash.replace('#', '');
+          const el = document.getElementById(id);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 120);
+    } else {
+      if (!hash || hash === '#') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const id = hash.replace('#', '');
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  };
+
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <Link to="/" className="nav-logo" aria-label="Enkop Safaris Home">
+        <Link
+          to="/"
+          className="nav-logo"
+          aria-label="Enkop Safaris Home"
+          onClick={(e) => handleNavClick(e, '')}
+        >
           <img 
             src="/enkop-logo-transparent.png" 
             alt="Enkop Safaris" 
@@ -35,11 +70,12 @@ export default function Navbar({ onOpenMobileMenu }) {
         </Link>
 
         <nav className="nav-links">
-          <a href="#">Home</a>
-          <a href="#destinations">Safaris</a>
-          <a href="#services">Destinations</a>
-          <a href="#our-story">Our Story</a>
-          <a href="#contact">Contact</a>
+          <a href="/" onClick={(e) => handleNavClick(e, '')}>Home</a>
+          <Link to="/itineraries">Safaris</Link>
+          <a href="/#destinations" onClick={(e) => handleNavClick(e, '#destinations')}>Destinations</a>
+          <Link to="/4x4-landcruisers">4x4 Fleet</Link>
+          <a href="/#our-story" onClick={(e) => handleNavClick(e, '#our-story')}>Our Story</a>
+          <a href="/#contact" onClick={(e) => handleNavClick(e, '#contact')}>Contact</a>
         </nav>
 
         <div className="nav-right">

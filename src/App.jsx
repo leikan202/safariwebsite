@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { CurrencyProvider } from './context/CurrencyContext';
 import { TripBuilderProvider } from './context/TripBuilderContext';
 import Navbar from './components/Navbar';
@@ -7,6 +8,7 @@ import Hero from './components/Hero';
 import Intro from './components/Intro';
 import Services from './components/Services';
 import Destinations from './components/Destinations';
+import BestTimeToTravel from './components/BestTimeToTravel';
 import WhyUs from './components/WhyUs';
 import OurStory from './components/OurStory';
 
@@ -20,7 +22,27 @@ import Footer from './components/Footer';
 import MobileBottomCTA from './components/MobileBottomCTA';
 import TripBuilderDrawer from './components/TripBuilderDrawer';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandCruiserSection from './components/LandCruiserSection';
+import LandCruiserPage from './components/LandCruiserPage';
+import ItinerariesPage from './components/ItinerariesPage';
+
+function ScrollToHash() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [pathname, hash]);
+
+  return null;
+}
 
 function Home() {
   return (
@@ -30,7 +52,9 @@ function Home() {
       <Services />
       <OurStory />
       <Destinations />
+      <BestTimeToTravel />
       <WhyUs />
+      <LandCruiserSection />
       <WildlifeParallax />
       <Conservation />
       <SocialFeed />
@@ -55,6 +79,7 @@ export default function App() {
     <CurrencyProvider>
       <TripBuilderProvider>
         <Router>
+          <ScrollToHash />
           <div className="app">
             <Navbar onOpenMobileMenu={() => setMobileMenuOpen(true)} />
             <MobileOverlay isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
@@ -62,6 +87,10 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/faq" element={<FAQPage />} />
+              <Route path="/4x4-landcruisers" element={<LandCruiserPage />} />
+              <Route path="/safari-fleet" element={<LandCruiserPage />} />
+              <Route path="/itineraries" element={<ItinerariesPage />} />
+              <Route path="/safaris" element={<ItinerariesPage />} />
             </Routes>
 
             <Footer />

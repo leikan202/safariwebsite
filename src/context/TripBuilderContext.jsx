@@ -27,7 +27,7 @@ export function TripBuilderProvider({ children }) {
         country: initialInterest.includes('Tanzania') ? 'Tanzania' : 'Kenya',
         interest: initialInterest 
       }));
-      setActiveStep(2);
+      setActiveStep(4);
     } else {
       setActiveStep(1);
     }

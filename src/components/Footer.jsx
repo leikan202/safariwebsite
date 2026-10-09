@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Youtube } from 'lucide-react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 import { PatternElement } from './BrandElements';
@@ -194,16 +195,17 @@ export default function Footer() {
               }}
             >
               {[
-                { label: 'Home', href: '#' },
-                { label: 'Safaris', href: '#destinations' },
-                { label: 'Destinations', href: '#services' },
-                { label: 'Experiences', href: '#experience' },
-                { label: 'About Us', href: '#our-story' },
-                { label: 'Contact', href: '#contact' }
+                { label: 'Home', href: '/' },
+                { label: 'Safaris', href: '/#destinations' },
+                { label: 'Destinations', href: '/#services' },
+                { label: '4x4 Fleet', href: '/4x4-landcruisers' },
+                { label: 'About Us', href: '/#our-story' },
+                { label: 'FAQ', href: '/faq' },
+                { label: 'Contact', href: '/#contact' }
               ].map((link, idx) => (
-                <a 
+                <Link 
                   key={idx} 
-                  href={link.href} 
+                  to={link.href} 
                   style={{ 
                     fontFamily: 'var(--font-sans)', 
                     fontSize: '0.75rem', 
@@ -214,7 +216,7 @@ export default function Footer() {
                   }}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
 
