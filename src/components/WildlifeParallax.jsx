@@ -8,17 +8,28 @@ export default function WildlifeParallax() {
   const imgRef = useRef(null);
 
   useEffect(() => {
+    let ticking = false;
+
+    const updateParallax = () => {
+      if (imgRef.current && imgRef.current.parentElement) {
+        const rect = imgRef.current.parentElement.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+          const yPos = scrollPercent * 15;
+          imgRef.current.style.transform = `translate3d(0, ${yPos}%, 0)`;
+        }
+      }
+      ticking = false;
+    };
+
     const handleScroll = () => {
-      if (!imgRef.current) return;
-      const rect = imgRef.current.parentElement.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-        const yPos = scrollPercent * 15;
-        imgRef.current.style.transform = `translate3d(0, ${yPos}%, 0)`;
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

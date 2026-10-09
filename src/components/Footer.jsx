@@ -195,8 +195,8 @@ export default function Footer() {
             >
               {[
                 { label: 'Home', href: '#' },
-                { label: 'Destinations', href: '#destinations' },
-                { label: 'Safaris', href: '#services' },
+                { label: 'Safaris', href: '#destinations' },
+                { label: 'Destinations', href: '#services' },
                 { label: 'Experiences', href: '#experience' },
                 { label: 'About Us', href: '#our-story' },
                 { label: 'Contact', href: '#contact' }

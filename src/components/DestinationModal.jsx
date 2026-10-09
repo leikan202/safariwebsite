@@ -93,77 +93,80 @@ export default function DestinationModal({ destId, onClose }) {
 
   return (
     <div className="modal-overlay" onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
-      <div className="dest-luxury-card">
-        {/* Hero Image Container */}
-        <div className="dest-hero-header">
-          <img src={data.image} alt={data.name} className="dest-hero-img" />
-          <div className="dest-hero-vignette"></div>
+      <div className="dest-editorial-modal">
+        {/* Editorial Hero Header */}
+        <div className="dest-editorial-header">
+          <img src={data.image} alt={data.name} className="dest-editorial-img" />
+          <div className="dest-editorial-overlay"></div>
 
-          <div className="dest-hero-badge">
-            <MapPin size={13} style={{ color: 'var(--color-accent)' }} />
-            <span>{data.location}</span>
+          <div className="dest-editorial-meta">
+            <span className="dest-editorial-kicker">Destinations &middot; Field Guide</span>
+            <span className="dest-editorial-loc">
+              <MapPin size={12} />
+              {data.location}
+            </span>
           </div>
 
-          <button className="dest-glass-close" onClick={onClose} aria-label="Close modal">
-            <X size={20} />
+          <button className="dest-editorial-close" onClick={onClose} aria-label="Close details">
+            <X size={18} />
           </button>
 
-          <div className="dest-hero-title-box">
-            <span className="dest-type-tag">DESTINATION OVERVIEW</span>
+          <div className="dest-editorial-headline">
             <h2>{data.name}</h2>
           </div>
         </div>
 
-        {/* Modal Body Content */}
-        <div className="dest-luxury-body">
-          <p className="dest-luxury-tagline">{data.tagline}</p>
+        {/* Editorial Dossier Body */}
+        <div className="dest-editorial-body">
+          <div className="dest-editorial-intro">
+            <p className="dest-editorial-tagline">&ldquo;{data.tagline}&rdquo;</p>
+          </div>
 
-          {/* Quick Info Grid */}
-          <div className="dest-quick-grid">
-            <div className="quick-info-card">
-              <Calendar size={18} className="info-card-icon" />
-              <div>
-                <span className="info-card-label">Best Season</span>
-                <span className="info-card-val">{data.bestTime}</span>
-              </div>
+          {/* Curated Specifications Hairline Bar */}
+          <div className="dest-specs-strip">
+            <div className="dest-spec-col">
+              <span className="dest-spec-label">Prime Season &amp; Timing</span>
+              <p className="dest-spec-val">{data.bestTime}</p>
             </div>
-            <div className="quick-info-card">
-              <Compass size={18} className="info-card-icon" />
-              <div>
-                <span className="info-card-label">Accommodation Style</span>
-                <span className="info-card-val">{data.stay}</span>
-              </div>
+            <div className="dest-spec-divider"></div>
+            <div className="dest-spec-col">
+              <span className="dest-spec-label">Recommended Wilderness Stays</span>
+              <p className="dest-spec-val">{data.stay}</p>
             </div>
           </div>
 
-          {/* Key Experience Feature Cards Grid */}
-          <div className="dest-experience-section">
-            <p className="experience-section-title">
-              <Sparkles size={16} style={{ color: 'var(--color-accent)' }} />
-              Signature Experiences & Highlights
-            </p>
+          {/* Signature Highlights Editorial Grid */}
+          <div className="dest-highlights-editorial">
+            <div className="dest-highlights-header">
+              <span className="dest-highlights-title">Signature Wilderness Encounters</span>
+              <span className="dest-highlights-rule"></span>
+            </div>
 
-            <div className="experience-cards-grid">
+            <div className="dest-highlights-list">
               {data.highlights.map((item, idx) => (
-                <div key={idx} className="experience-feature-card">
-                  <div className="feature-card-header">
-                    <CheckCircle2 size={16} className="feature-check-icon" />
-                    <h4>{item.title}</h4>
+                <div key={idx} className="dest-highlight-entry">
+                  <div className="dest-highlight-num">
+                    {String(idx + 1).padStart(2, '0')}
                   </div>
-                  <p>{item.desc}</p>
+                  <div className="dest-highlight-text">
+                    <h4>{item.title}</h4>
+                    <p>{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Action Footer */}
-          <div className="dest-luxury-footer">
-            <button type="button" className="dest-luxury-cta-btn" onClick={handlePlanClick}>
-              <span>Plan Safari to {data.name}</span>
-              <ArrowRight size={18} />
+          {/* Footer Action */}
+          <div className="dest-editorial-footer">
+            <button type="button" className="dest-editorial-cta" onClick={handlePlanClick}>
+              <span>Inquire &amp; Plan Itinerary for {data.name}</span>
+              <ArrowRight size={16} />
             </button>
+            <p className="dest-editorial-footnote">
+              Curated directly with licensed Kenyan driver-guides &middot; No third-party markups
+            </p>
           </div>
-
         </div>
       </div>
     </div>

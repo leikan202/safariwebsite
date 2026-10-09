@@ -33,6 +33,8 @@ export default function OurStory() {
           <img 
             src={kilimanjaroImg} 
             alt="Kilimanjaro savannah landscape" 
+            loading="lazy"
+            decoding="async"
             style={{ 
               width: '100%', 
               height: '100%', 

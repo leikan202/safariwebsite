@@ -9,6 +9,8 @@ export default function Hero() {
         className="hero-video"
         src={heroImage}
         alt="Kenyan Safari Sunrise"
+        fetchPriority="high"
+        decoding="async"
       />
       <div className="hero-overlay"></div>
 

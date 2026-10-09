@@ -30,8 +30,8 @@ export default function MobileOverlay({ isOpen, onClose }) {
         </button>
 
         <nav className="overlay-nav">
-          <a href="#services" className="overlay-link" onClick={() => handleLinkClick('#services')}>Services</a>
-          <a href="#destinations" className="overlay-link" onClick={() => handleLinkClick('#destinations')}>Destinations</a>
+          <a href="#destinations" className="overlay-link" onClick={() => handleLinkClick('#destinations')}>Safaris</a>
+          <a href="#services" className="overlay-link" onClick={() => handleLinkClick('#services')}>Destinations</a>
           <a href="#why-us" className="overlay-link" onClick={() => handleLinkClick('#why-us')}>Why Us</a>
           <a href="#social" className="overlay-link" onClick={() => handleLinkClick('#social')}>On Safari Now</a>
           <a href="#faq" className="overlay-link" onClick={() => handleLinkClick('#faq')}>FAQ</a>

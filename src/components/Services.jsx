@@ -57,7 +57,7 @@ export default function Services() {
               onClick={() => openDrawer(service.title)}
             >
               <div className="img-wrapper">
-                <img src={service.image} loading="lazy" alt={service.title} />
+                <img src={service.image} loading="lazy" decoding="async" alt={service.title} />
               </div>
               <div className="service-info" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3>{service.title}</h3>
