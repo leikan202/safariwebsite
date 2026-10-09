@@ -60,7 +60,7 @@ export default function TripBuilderDrawer() {
           <div className={`quiz-step ${activeStep === 1 ? 'active' : ''}`}>
             <p className="quiz-question">What type of trip are you looking for?</p>
             <div className="grid-options">
-              {['Adventure Kenya', 'Maasai Mara', 'Amboseli', 'Laikipia Plateau', 'Diani Beach', 'Corporate Travel', 'City & Day Trips', 'Transfers & Ticketing'].map((item) => (
+              {['Adventure Kenya', 'Maasai Mara', 'Amboseli', 'Northern Kenya', 'Diani Beach', 'Corporate Travel', 'City & Day Trips', 'Transfers & Ticketing'].map((item) => (
                 <button
                   key={item}
                   type="button"

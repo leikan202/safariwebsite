@@ -8,7 +8,7 @@ export default function Intro() {
   return (
     <section className="intro-section">
       <div className="container intro-inner">
-        <p className="section-label">SAFARI DIRECT KENYA</p>
+        <p className="section-label">Enkop Safaris</p>
         <h2 className="intro-headline">Expert-led journeys across<br />Kenya's finest wilderness.</h2>
         <p className="intro-body">
           Every journey is designed around you, guided by licensed Kenyan driver-guides who have spent years reading the land. Unforgettable experiences tailored to your every need.

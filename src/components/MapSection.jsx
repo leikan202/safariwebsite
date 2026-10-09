@@ -12,7 +12,7 @@ export default function MapSection() {
 
         <div className="map-v2-wrapper">
           <iframe
-            title="Safari Direct Kenya Location — Hillpark Suites, Langata"
+            title="Enkop Safaris Location — Hillpark Suites, Langata"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8!2d36.7456!3d-1.3636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a3c5d8e9f%3A0xabc123!2sHillpark%20Suites%20Langata!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
             width="100%"
             height="100%"
@@ -27,7 +27,7 @@ export default function MapSection() {
             <div className="map-float-row">
               <div className="map-float-icon"><MapPin size={18} /></div>
               <div>
-                <strong>Safari Direct Kenya</strong>
+                <strong>Enkop Safaris</strong>
                 <p>Hillpark Suites, Langata · Nairobi, Kenya</p>
               </div>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 import LiquidGlassButton from './LiquidGlassButton';
 import { Phone, Mail } from 'lucide-react';
+import imgContact from '../../assets/images/ahmed-galal-8fH4JwxbAyw-unsplash.jpg';
 
 export default function Contact() {
   const { openDrawer } = useTripBuilder();
@@ -10,7 +11,7 @@ export default function Contact() {
     <section className="contact-section" id="contact">
       <div
         className="contact-bg"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1713639160585-fa2ea361e01e?auto=format&fit=crop&w=2000&q=80')` }}
+        style={{ backgroundImage: `url(${imgContact})` }}
       ></div>
       <div className="contact-overlay"></div>
       <div className="container contact-content">

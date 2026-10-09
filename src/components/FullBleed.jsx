@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import imgFullBleed from '../../assets/images/sutirta-budiman-89IBtfoz3Vw-unsplash.jpg';
 
 export default function FullBleed() {
   const imgRef = useRef(null);
@@ -23,7 +24,7 @@ export default function FullBleed() {
       <div className="parallax-container" style={{ width: '100%', height: '100%' }}>
         <img
           ref={imgRef}
-          src="https://images.unsplash.com/photo-1564101160531-4838e8a5f4e7?auto=format&fit=crop&w=2000&q=80"
+          src={imgFullBleed}
           loading="lazy"
           alt="The Great Migration, Maasai Mara"
           className="full-bleed-img parallax-img"

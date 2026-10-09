@@ -1,5 +1,5 @@
 /**
- * SAFARI DIRECT KENYA — LUXURY MINIMALIST SCRIPT (2026 EDITION)
+ * Enkop Safaris — LUXURY MINIMALIST SCRIPT (2026 EDITION)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     quizData.notes = document.getElementById('quizNotes').value.trim();
     
     // Construct WA Message
-    const messageText = `Hello SAFARI DIRECT KENYA! I've planned my safari:\n\n- Destination: ${quizData.destination || 'Not sure yet'}\n- Timeline: ${quizData.month || 'Flexible'}\n- Group: ${quizData.groupSize || 'Not specified'}${quizData.notes ? `\n- Notes: ${quizData.notes}` : ''}\n\nCould you connect me with an expert driver guide to discuss?`;
+    const messageText = `Hello Enkop Safaris! I've planned my safari:\n\n- Destination: ${quizData.destination || 'Not sure yet'}\n- Timeline: ${quizData.month || 'Flexible'}\n- Group: ${quizData.groupSize || 'Not specified'}${quizData.notes ? `\n- Notes: ${quizData.notes}` : ''}\n\nCould you connect me with an expert driver guide to discuss?`;
 
     const encodedMessage = encodeURIComponent(messageText);
     const waUrl = `https://wa.me/254700000000?text=${encodedMessage}`;

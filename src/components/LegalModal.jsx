@@ -23,7 +23,7 @@ export default function LegalModal({ type, onClose }) {
           {isPrivacy ? (
             <>
               <h4>1. Information We Collect</h4>
-              <p>When you inquire or book a safari through Safari Direct Kenya, we collect details such as your name, email address, WhatsApp number, travel dates, passenger counts, and accommodation preferences solely to organize your safari logistics.</p>
+              <p>When you inquire or book a safari through Enkop Safaris, we collect details such as your name, email address, WhatsApp number, travel dates, passenger counts, and accommodation preferences solely to organize your safari logistics.</p>
 
               <h4>2. How We Use Your Data</h4>
               <p>Your information is strictly used to communicate trip options, reserve lodge accommodations, arrange licensed 4x4 transport, and acquire national park entry permits. We never sell or trade your personal data to third-party advertisers.</p>
@@ -43,7 +43,7 @@ export default function LegalModal({ type, onClose }) {
               <p>All safaris are conducted by KPSGA-certified licensed professional driver-guides in custom 4x4 Toyota Land Cruisers. All park entry fees and conservancy levies are handled in accordance with Kenya Wildlife Service (KWS) regulations.</p>
 
               <h4>4. Assumption of Risk & Liability</h4>
-              <p>African safaris inherently involve proximity to wild, unpredictable animals and travel through remote natural environments. By booking, you acknowledge these inherent risks. Safari Direct Kenya and its agents shall not be held liable for any injury, illness, loss of property, or travel delays caused by forces of nature, weather, or circumstances beyond our control. <strong>Wildlife sightings, while highly probable, are completely natural occurrences and cannot be 100% guaranteed.</strong></p>
+              <p>African safaris inherently involve proximity to wild, unpredictable animals and travel through remote natural environments. By booking, you acknowledge these inherent risks. Enkop Safaris and its agents shall not be held liable for any injury, illness, loss of property, or travel delays caused by forces of nature, weather, or circumstances beyond our control. <strong>Wildlife sightings, while highly probable, are completely natural occurrences and cannot be 100% guaranteed.</strong></p>
 
               <h4>5. Mandatory Travel & Medical Insurance</h4>
               <p>Comprehensive travel insurance covering medical emergencies, trip cancellation, repatriation, and loss of baggage is <strong>strictly mandatory</strong> for all guests. While we may provide temporary Flying Doctors (AMREF) evacuation coverage from the bush to a Nairobi hospital (if included in your quote), this does not cover medical treatment bills or international flights home.</p>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import LiquidGlassButton from './LiquidGlassButton';
 import { useTripBuilder } from '../context/TripBuilderContext';
+import imgParallax from '../../assets/images/sneha-cecil-DEBrMzu-D8I-unsplash.jpg';
 
 export default function WildlifeParallax() {
   const { openDrawer } = useTripBuilder();
@@ -26,7 +27,7 @@ export default function WildlifeParallax() {
       <div className="split-image parallax-container">
         <img
           ref={imgRef}
-          src="https://images.unsplash.com/photo-1569691105751-88df003de7a4?auto=format&fit=crop&w=1200&q=80"
+          src={imgParallax}
           loading="lazy"
           className="parallax-img"
           alt="Leopard in the wild, Kenya"

@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 import DestinationModal from './DestinationModal';
 
+import imgMara from '../../assets/images/leonard-von-bibra-L4-BDd01wmM-unsplash.jpg';
+import imgAmboseli from '../../assets/images/neil-and-zulma-scott-hjv3VO-jpnc-unsplash.jpg';
+import imgNorthernKenya from '../../assets/images/polina-koroleva-36DSACYDey0-unsplash.jpg';
+import imgDiani from '../../assets/images/ezekiel-kilimo-m_06_L3cKY0-unsplash.jpg';
+
 export default function Destinations() {
   const { openDrawer } = useTripBuilder();
   const [activeModal, setActiveModal] = useState(null);
@@ -10,22 +15,22 @@ export default function Destinations() {
     {
       id: 'mara',
       name: 'Maasai Mara',
-      image: 'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=800&q=80'
+      image: imgMara
     },
     {
       id: 'amboseli',
       name: 'Amboseli',
-      image: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=800&q=80'
+      image: imgAmboseli
     },
     {
-      id: 'laikipia',
-      name: 'Laikipia',
-      image: 'https://images.unsplash.com/photo-1598894000396-bc30e0996899?auto=format&fit=crop&w=800&q=80'
+      id: 'northern-kenya',
+      name: 'Northern Kenya',
+      image: imgNorthernKenya
     },
     {
       id: 'diani',
       name: 'Diani Beach',
-      image: 'https://images.unsplash.com/photo-1667935837291-1dc178866251?auto=format&fit=crop&w=800&q=80'
+      image: imgDiani
     }
   ];
 

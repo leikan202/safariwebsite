@@ -1,12 +1,13 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
+import heroImage from '../../assets/images/melissa-van-niekerk-IOJx2UIKBeA-unsplash.jpg';
 
 export default function Hero() {
   return (
     <section className="hero" id="hero">
       <img
         className="hero-video"
-        src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2560&q=80"
+        src={heroImage}
         alt="Kenyan Safari Sunrise"
       />
       <div className="hero-overlay"></div>

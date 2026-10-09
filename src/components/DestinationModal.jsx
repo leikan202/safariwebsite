@@ -2,12 +2,17 @@ import React from 'react';
 import { X, Calendar, Compass, Sparkles, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 
+import imgMara from '../../assets/images/leonard-von-bibra-L4-BDd01wmM-unsplash.jpg';
+import imgAmboseli from '../../assets/images/neil-and-zulma-scott-hjv3VO-jpnc-unsplash.jpg';
+import imgNorthernKenya from '../../assets/images/polina-koroleva-36DSACYDey0-unsplash.jpg';
+import imgDiani from '../../assets/images/ezekiel-kilimo-m_06_L3cKY0-unsplash.jpg';
+
 const DESTINATION_DETAILS = {
   mara: {
     name: 'Maasai Mara National Reserve',
     location: 'Narok County, Kenya',
     tagline: 'The world-famous kingdom of the Great Wildebeest Migration & apex predators.',
-    image: 'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80',
+    image: imgMara,
     bestTime: 'July to October (Migration Crossings) & Jan–Feb',
     stay: 'Exclusive Conservancies, Luxury Tented Camps & Safari Lodges',
     highlights: [
@@ -21,7 +26,7 @@ const DESTINATION_DETAILS = {
     name: 'Amboseli National Park',
     location: 'Kajiado County, Kenya',
     tagline: 'Iconic panoramic views of snow-capped Mt. Kilimanjaro with giant elephant herds.',
-    image: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1200&q=80',
+    image: imgAmboseli,
     bestTime: 'June to October & January to February',
     stay: 'Amboseli Serena, Ol Tukai Lodge & Tented Bush Camps',
     highlights: [
@@ -31,25 +36,39 @@ const DESTINATION_DETAILS = {
       { title: 'Swamp Bird Sanctuary', desc: 'Over 400 bird species thriving in permanent freshwater springs.' }
     ]
   },
-  laikipia: {
-    name: 'Laikipia & Ol Pejeta Sanctuary',
-    location: 'Laikipia County, Kenya',
-    tagline: 'East Africa’s premier rhino sanctuary & high-end private conservancy area.',
-    image: 'https://images.unsplash.com/photo-1598894000396-bc30e0996899?auto=format&fit=crop&w=1200&q=80',
+  'northern-kenya': {
+    name: 'Northern Kenya & Samburu',
+    location: 'Samburu & Laikipia, Northern Kenya',
+    tagline: 'Rugged wild frontier, Samburu Special Five & vast private wilderness conservancies.',
+    image: imgNorthernKenya,
     bestTime: 'Year-Round (Peak dry months June–Oct & Dec–March)',
-    stay: 'Segera Retreat, Sweetwaters Tented Camp & Sanctuary Camps',
+    stay: 'Saruni Samburu, Sasaab, Segera Retreat & Luxury Tented Camps',
     highlights: [
-      { title: 'Last Northern White Rhinos', desc: 'Home to the world’s last two surviving Northern White Rhinos.' },
-      { title: 'Chimpanzee Sanctuary', desc: 'Kenya’s only sanctuary for rescued chimpanzees.' },
-      { title: 'Night Game Drives', desc: 'Exclusive nocturnal drives & walking bush safaris.' },
-      { title: 'Private Conservancies', desc: 'Crowd-free luxury wildlife encounters with private guides.' }
+      { title: 'The Samburu Special Five', desc: 'Gerenuk, Grevy’s zebra, reticulated giraffe, Somali ostrich & beisa oryx.' },
+      { title: 'Rugged Sacred Landscapes', desc: 'Dramatic granite koppies, Ewaso Ng’iro River & Mt. Ololokwe views.' },
+      { title: 'Samburu Cultural Heritage', desc: 'Intimate traditions, song and lore of the semi-nomadic Samburu people.' },
+      { title: 'Exclusive Conservancies', desc: 'Unmatched wilderness solitude, night game drives & walking safaris.' }
+    ]
+  },
+  laikipia: {
+    name: 'Northern Kenya & Samburu',
+    location: 'Samburu & Laikipia, Northern Kenya',
+    tagline: 'Rugged wild frontier, Samburu Special Five & vast private wilderness conservancies.',
+    image: imgNorthernKenya,
+    bestTime: 'Year-Round (Peak dry months June–Oct & Dec–March)',
+    stay: 'Saruni Samburu, Sasaab, Segera Retreat & Luxury Tented Camps',
+    highlights: [
+      { title: 'The Samburu Special Five', desc: 'Gerenuk, Grevy’s zebra, reticulated giraffe, Somali ostrich & beisa oryx.' },
+      { title: 'Rugged Sacred Landscapes', desc: 'Dramatic granite koppies, Ewaso Ng’iro River & Mt. Ololokwe views.' },
+      { title: 'Samburu Cultural Heritage', desc: 'Intimate traditions, song and lore of the semi-nomadic Samburu people.' },
+      { title: 'Exclusive Conservancies', desc: 'Unmatched wilderness solitude, night game drives & walking safaris.' }
     ]
   },
   diani: {
     name: 'Diani Beach & Coastal Reefs',
     location: 'Kwale County, Kenya',
     tagline: 'Award-winning powder-white sand beaches bordering the warm Indian Ocean.',
-    image: 'https://images.unsplash.com/photo-1667935837291-1dc178866251?auto=format&fit=crop&w=1200&q=80',
+    image: imgDiani,
     bestTime: 'October to March (Warm clear sea waters & sun)',
     stay: 'Swahili Beach Resort, AfroChic Diani & Luxury Ocean Villas',
     highlights: [

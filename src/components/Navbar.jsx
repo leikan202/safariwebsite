@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useCurrency } from '../context/CurrencyContext';
+import { Link } from 'react-router-dom';
 import { useTripBuilder } from '../context/TripBuilderContext';
 
 export default function Navbar({ onOpenMobileMenu }) {
   const [scrolled, setScrolled] = useState(false);
-  const { currency, toggleCurrency } = useCurrency();
   const { openDrawer } = useTripBuilder();
 
   useEffect(() => {
@@ -23,29 +22,25 @@ export default function Navbar({ onOpenMobileMenu }) {
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <a href="#" className="nav-logo">
-          SAFARI DIRECT <span>KENYA</span>
-        </a>
+        <Link to="/" className="nav-logo" style={{ textDecoration: 'none' }}>
+          <img 
+            src="/enkop-logo-transparent.png" 
+            alt="Enkop Safaris" 
+            className="nav-logo-img" 
+            style={{ height: '84px', width: 'auto', objectFit: 'contain' }}
+          />
+        </Link>
 
-        <div className="nav-right">
-          {/* Currency Toggle */}
-          <div className={`currency-toggle ${currency === 'KES' ? 'is-kes' : ''}`}>
-            <div className="currency-slider"></div>
-            <button
-              className={`currency-btn ${currency === 'USD' ? 'active' : ''}`}
-              onClick={() => toggleCurrency('USD')}
-            >
-              USD
-            </button>
-            <button
-              className={`currency-btn ${currency === 'KES' ? 'active' : ''}`}
-              onClick={() => toggleCurrency('KES')}
-            >
-              KES
-            </button>
-          </div>
+        <nav className="nav-links" style={{ display: 'flex', gap: '28px', alignItems: 'center' }}>
+          <a href="#" style={{ textDecoration: 'none', fontSize: '0.82rem', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'inherit' }}>Home</a>
+          <a href="#destinations" style={{ textDecoration: 'none', fontSize: '0.82rem', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'inherit' }}>Destinations</a>
+          <a href="#services" style={{ textDecoration: 'none', fontSize: '0.82rem', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'inherit' }}>Safaris</a>
+          <a href="#our-story" style={{ textDecoration: 'none', fontSize: '0.82rem', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'inherit' }}>Our Story</a>
+          <a href="#contact" style={{ textDecoration: 'none', fontSize: '0.82rem', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'inherit' }}>Contact</a>
+        </nav>
 
-          <button className="nav-enquire-btn" onClick={() => openDrawer()}>
+        <div className="nav-right" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <button className="nav-enquire-btn" onClick={() => openDrawer()} style={{ borderRadius: '9999px', padding: '10px 24px', letterSpacing: '0.15em', fontSize: '0.75rem' }}>
             Plan Safari
           </button>
 

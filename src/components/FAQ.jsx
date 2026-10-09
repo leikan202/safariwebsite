@@ -24,7 +24,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'booking',
-    question: 'Why should I book directly with Safari Direct Kenya instead of a travel agency?',
+    question: 'Why should I book directly with Enkop Safaris instead of a travel agency?',
     answer: 'Booking directly connects you straight to licensed local driver-guides without third-party commission markups. You get 100% transparent pricing, a custom-crafted itinerary tailored to your exact budget, and direct WhatsApp communication with the team on the ground.'
   },
   {
@@ -39,7 +39,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'experience',
-    question: 'What is included in a custom Safari Direct Kenya package?',
+    question: 'What is included in a custom Enkop Safaris package?',
     answer: 'Our packages are all-inclusive of private 4x4 Land Cruiser transport with pop-up roof, experienced licensed driver-guide, full-board lodge/camp accommodations, all national park & conservancy entry fees, unlimited game drives, and complimentary bottled water. Many packages also include temporary AMREF Flying Doctors evacuation cover (which provides emergency airlift from the bush to a Nairobi hospital, but does not cover the hospital medical bills).'
   },
   {
@@ -70,7 +70,7 @@ const FAQ_ITEMS = [
   {
     category: 'health',
     question: 'Is travel and medical insurance required?',
-    answer: 'Yes, comprehensive travel insurance is strictly mandatory for all guests. Your policy must cover medical emergencies, hospital bills, trip cancellation, repatriation, and loss of baggage. Safari Direct Kenya cannot be held liable for medical costs or trip interruptions.'
+    answer: 'Yes, comprehensive travel insurance is strictly mandatory for all guests. Your policy must cover medical emergencies, hospital bills, trip cancellation, repatriation, and loss of baggage. Enkop Safaris cannot be held liable for medical costs or trip interruptions.'
   },
   {
     category: 'logistics',

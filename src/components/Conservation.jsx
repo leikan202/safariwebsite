@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 import LiquidGlassButton from './LiquidGlassButton';
+import imgConservation from '../../assets/images/ahmed-galal-GMO1Jq3Ajfo-unsplash.jpg';
 
 export default function Conservation() {
   const { openDrawer } = useTripBuilder();
@@ -9,7 +10,7 @@ export default function Conservation() {
     <section className="conservation-section">
       <div
         className="conservation-bg"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=2000&q=80')` }}
+        style={{ backgroundImage: `url(${imgConservation})` }}
       ></div>
       <div className="conservation-overlay"></div>
       <div className="container conservation-content">

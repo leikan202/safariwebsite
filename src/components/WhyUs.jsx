@@ -1,39 +1,45 @@
 import React from 'react';
-import { ShieldCheck, Award, Compass } from 'lucide-react';
+import { Compass, Sparkles, ShieldCheck } from 'lucide-react';
 
 export default function WhyUs() {
   return (
     <section className="why-us-section" id="why-us">
       <div className="container why-us-inner">
         <div className="why-us-content">
-          <p className="section-label">THE PREMIUM EXPERIENCE</p>
-          <h2 className="split-headline">Why travel with us?</h2>
+          <p className="section-label">THE ENKOP DIFFERENCE</p>
+          <h2 className="split-headline">Why journey with us?</h2>
           <div className="features-list">
             <div className="feature-item">
               <div className="feature-icon">
-                <ShieldCheck size={24} color="var(--color-accent)" />
+                <Compass size={22} color="var(--color-secondary)" />
               </div>
               <div className="feature-text">
-                <h4>Direct Booking</h4>
-                <p>No middlemen or agency markups. You deal directly with local ground handlers.</p>
+                <h4>Born of This Land</h4>
+                <p>
+                  Kenya is not simply our workplace — it is our home. Guided by lifelong Kenyan naturalists with generational knowledge of wildlife corridors and seasonal movements, you experience the bush through the eyes of those who belong to it.
+                </p>
               </div>
             </div>
             <div className="feature-item">
               <div className="feature-icon">
-                <Award size={24} color="var(--color-accent)" />
+                <Sparkles size={22} color="var(--color-secondary)" />
               </div>
               <div className="feature-text">
-                <h4>Licensed Local Guides</h4>
-                <p>Our guides are KPSGA certified experts born and raised in Kenya.</p>
+                <h4>Thoughtfully Tailored</h4>
+                <p>
+                  True luxury is stillness, exclusivity, and unhurried time. We curate every journey around your personal rhythm — handpicking private conservancies, boutique wilderness camps, and dawn moments that can never be replicated.
+                </p>
               </div>
             </div>
             <div className="feature-item">
               <div className="feature-icon">
-                <Compass size={24} color="var(--color-accent)" />
+                <ShieldCheck size={22} color="var(--color-secondary)" />
               </div>
               <div className="feature-text">
-                <h4>Bespoke Itineraries</h4>
-                <p>Every journey is crafted from scratch based on your specific interests and style.</p>
+                <h4>Good by Nature</h4>
+                <p>
+                  At our core is the ostrich — in Maa, <em>Esidai</em>, meaning 'good'. We partner with community-owned conservancies and local preservation initiatives, ensuring your presence leaves a lasting, positive footprint on the wild and its people.
+                </p>
               </div>
             </div>
           </div>
@@ -42,7 +48,7 @@ export default function WhyUs() {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Safari_in_Kenia_am_Mara_Timbo_Camp%2C_Masai_Mara.JPG"
             loading="lazy"
-            alt="Luxury Safari Tent"
+            alt="Giraffes grazing peacefully in Kenya"
           />
         </div>
       </div>

@@ -2,6 +2,9 @@ import React from 'react';
 import { Play } from 'lucide-react';
 
 export default function SocialFeed() {
+  // Hiding this section for now, to be added back later
+  return null;
+
   const posts = [
     {
       id: 1,
