@@ -1,57 +1,89 @@
-import React from 'react';
-import { Calendar, CloudRain, Sun, Info } from 'lucide-react';
-import imgWildebeest from '../../assets/images/stephan-bechert-xQWelDCacZE-unsplash.jpg';
-import imgCalving from '../../assets/images/ana-singh-1vOBJZ6228U-unsplash.jpg';
+import React, { useEffect, useRef, useState } from 'react';
+import { Sun, CloudRain, Info } from 'lucide-react';
+import imgWildebeest from '../../assets/images/ahmed-galal-8fH4JwxbAyw-unsplash.jpg';
 
 export default function BestTimeToTravel() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
   return (
-    <section className="season-section" id="best-time">
-      <div className="container">
-        <div className="season-header">
-          <span className="section-label">Travel Seasons</span>
-          <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '16px' }}>When is the Best Time to Go?</h2>
-          <p className="section-subtitle" style={{ maxWidth: '700px', margin: '0 auto 40px', color: 'var(--color-secondary)' }}>
-            Kenya offers spectacular year-round wildlife viewing. However, specific natural events like the Great Migration and changing weather patterns play a huge role in shaping your expedition.
+    <section 
+      ref={sectionRef}
+      className="cruiser-fade-section" 
+      id="best-time" 
+      style={{ backgroundColor: 'var(--color-bg-light)' }}
+    >
+      {/* Left Panoramic Photo with feathered gradient mask fading to ivory */}
+      <div className={`cruiser-fade-bg-wrapper reveal-up ${isVisible ? 'is-visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
+        <img
+          src={imgWildebeest}
+          alt="Wildebeest migration crossing a river in Kenya during peak season"
+          className="cruiser-fade-bg-img"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="cruiser-fade-mask" />
+      </div>
+
+      {/* Right Narrative Content */}
+      <div className="container cruiser-fade-container">
+        <div className={`cruiser-fade-content reveal-up ${isVisible ? 'is-visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
+          <p className="cruiser-fade-kicker">TRAVEL SEASONS</p>
+          <h2 className="cruiser-fade-title">When is the Best Time to Go?</h2>
+          <p className="cruiser-fade-lead">
+            Kenya offers spectacular year-round wildlife viewing. However, specific natural events like the Great Migration and seasonal rains play a huge role in shaping your safari experience.
           </p>
-        </div>
 
-        <div className="season-grid">
-          {/* Peak Season */}
-          <div className="season-card">
-            <div className="season-card-img" style={{ backgroundImage: `url(${imgWildebeest})` }}>
-              <div className="season-badge peak">Peak Season</div>
+          <div className="cruiser-fade-features">
+            <div className="cruiser-fade-feature-item">
+              <div className="cruiser-fade-feature-icon">
+                <Sun size={18} color="var(--color-secondary)" />
+              </div>
+              <div className="cruiser-fade-feature-text">
+                <h4>Peak Season (July &mdash; October)</h4>
+                <p>
+                  The Great Migration arrives in the Maasai Mara. Animals congregate around water sources, making predator sightings incredibly frequent. High demand; early booking is essential.
+                </p>
+              </div>
             </div>
-            <div className="season-card-content">
-              <h3>July &mdash; October</h3>
-              <p className="season-highlights"><strong>The Great Migration &amp; Dry Season</strong></p>
-              <p>The world-famous Wildebeest Migration arrives in the Maasai Mara. Animals congregate around water sources, making predator sightings incredibly frequent. Due to high demand, early booking is essential.</p>
-              <ul className="season-features">
-                <li><Sun size={14} /> Clear, sunny days with cool mornings</li>
-                <li><Calendar size={14} /> Best for: River crossings &amp; high predator action</li>
-              </ul>
+
+            <div className="cruiser-fade-feature-item">
+              <div className="cruiser-fade-feature-icon">
+                <CloudRain size={18} color="var(--color-secondary)" />
+              </div>
+              <div className="cruiser-fade-feature-text">
+                <h4>Green Season (November &mdash; May)</h4>
+                <p>
+                  The "short" and "long" rains transform the savannah into a vibrant green paradise. Prime birdwatching, newborn calving season, and incredible light for photography.
+                </p>
+              </div>
+            </div>
+
+            <div className="cruiser-fade-feature-item">
+              <div className="cruiser-fade-feature-icon">
+                <Info size={18} color="var(--color-secondary)" />
+              </div>
+              <div className="cruiser-fade-feature-text">
+                <h4>Insider Tip: Jan &mdash; March</h4>
+                <p>
+                  Our best-kept secret for safaris. Expect dry weather, fantastic wildlife viewing, and far fewer crowds compared to the July/August peak months.
+                </p>
+              </div>
             </div>
           </div>
-
-          {/* Green Season */}
-          <div className="season-card">
-            <div className="season-card-img" style={{ backgroundImage: `url(${imgCalving})` }}>
-              <div className="season-badge green">Green Season</div>
-            </div>
-            <div className="season-card-content">
-              <h3>November &mdash; May</h3>
-              <p className="season-highlights"><strong>Calving Season &amp; Lush Landscapes</strong></p>
-              <p>The "short rains" (Nov-Dec) and "long rains" (Apr-May) transform the savannah into a vibrant green paradise. This is prime birdwatching time and calving season, attracting intense predator activity.</p>
-              <ul className="season-features">
-                <li><CloudRain size={14} /> Brief afternoon showers, incredible light</li>
-                <li><Calendar size={14} /> Best for: Photography, newborns &amp; exclusivity</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="season-footer-note">
-          <Info size={16} />
-          <span><strong>Insider Tip:</strong> January through March is arguably our best-kept secret for safaris—dry weather, fantastic wildlife, and far fewer crowds than the July peak.</span>
         </div>
       </div>
     </section>

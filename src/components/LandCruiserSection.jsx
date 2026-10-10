@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Camera, Users, Zap, ArrowRight } from 'lucide-react';
 import deniceAlexImg from '../../assets/images/denice-alex-rlr0oaz2nZQ-unsplash.jpg';
 
 export default function LandCruiserSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="cruiser-fade-section" id="cruiser-experience">
+    <section ref={sectionRef} className="cruiser-fade-section" id="cruiser-experience">
       {/* Left Panoramic Photo with feathered gradient mask fading to ivory */}
-      <div className="cruiser-fade-bg-wrapper">
+      <div className={`cruiser-fade-bg-wrapper reveal-up ${isVisible ? 'is-visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
         <img
           src={deniceAlexImg}
           alt="Enkop Safaris custom 4x4 Safari Toyota Land Cruiser with open pop-up roof"
@@ -20,7 +37,7 @@ export default function LandCruiserSection() {
 
       {/* Right Narrative Content */}
       <div className="container cruiser-fade-container">
-        <div className="cruiser-fade-content">
+        <div className={`cruiser-fade-content reveal-up ${isVisible ? 'is-visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
           <p className="cruiser-fade-kicker">OUR SAFARI FLEET</p>
           <h2 className="cruiser-fade-title">Custom 4x4 Safari Land Cruisers</h2>
           <p className="cruiser-fade-lead">
