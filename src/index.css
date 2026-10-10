@@ -767,8 +767,8 @@ button {
 }
 .drawer-overlay.active .quiz-drawer { transform: translateX(0); }
 
-.drawer-header h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 2rem; margin-bottom: 6px; }
-.drawer-header p { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: var(--color-grey); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.drawer-header h3 { font-family: var(--font-body); font-weight: 800; font-size: 2rem; margin-bottom: 6px; }
+.drawer-header p { font-family: var(--font-body); font-weight: 700; color: var(--color-grey); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
 .drawer-close { font-size: 2rem; line-height: 1; color: var(--color-grey); border: none; background: none; cursor: pointer; }
 .drawer-close:hover { color: var(--color-black); }
 
@@ -782,7 +782,7 @@ button {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.quiz-question { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--color-black); margin-bottom: 20px; line-height: 1.3; }
+.quiz-question { font-family: var(--font-body); font-weight: 800; font-size: 1.5rem; color: var(--color-black); margin-bottom: 20px; line-height: 1.3; }
 
 .grid-options { display: flex; flex-direction: column; gap: 12px; }
 .flex-options { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -795,7 +795,7 @@ button {
   border: 1.5px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
   border-radius: 18px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 1rem;
 }
@@ -1041,7 +1041,7 @@ button {
 .budget-currency-symbol {
   position: absolute;
   left: 20px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-black);
@@ -1050,7 +1050,7 @@ button {
 .quiz-input.budget-field {
   padding-left: 65px;
   padding-right: 90px;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: var(--font-body) !important;
   font-size: 1.1rem;
   font-weight: 700;
   height: 56px;
@@ -1060,7 +1060,7 @@ button {
 .budget-per-person {
   position: absolute;
   right: 20px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-grey);
@@ -1077,7 +1077,7 @@ button {
   background: rgba(255, 255, 255, 0.9);
   border: 1.5px solid rgba(0, 0, 0, 0.1);
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-black);
@@ -1094,7 +1094,7 @@ button {
 }
 
 .quiz-subtext {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.92rem;
   color: var(--color-grey);
   margin-top: -12px;
@@ -1103,7 +1103,7 @@ button {
 }
 
 .quiz-section-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1136,7 +1136,7 @@ button {
 }
 
 .counter-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1145,7 +1145,7 @@ button {
 }
 
 .experience-badge {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
   background: rgba(181, 151, 90, 0.14);
@@ -1190,14 +1190,14 @@ button {
 }
 
 .count-number {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.6rem;
   font-weight: 800;
   color: var(--color-black);
 }
 
 .count-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-grey);
@@ -1232,7 +1232,7 @@ button {
 }
 
 .point-tag {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1241,7 +1241,7 @@ button {
 }
 
 .point-val {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 800;
   color: var(--color-black);
@@ -1265,7 +1265,7 @@ button {
 }
 
 .timeline-badge {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 800;
   color: var(--color-accent);
@@ -1613,7 +1613,7 @@ button {
 }
 
 .faq-subtitle {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: var(--color-grey);
   max-width: 640px;
@@ -1644,7 +1644,7 @@ button {
   background: var(--color-bg-light);
   border: 1.5px solid rgba(0, 0, 0, 0.1);
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--color-black);
@@ -1664,7 +1664,7 @@ button {
   background: rgba(0, 0, 0, 0.06);
   border: none;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--color-black);
@@ -1688,7 +1688,7 @@ button {
   background: var(--color-bg-light);
   border: 1.5px solid rgba(0, 0, 0, 0.1);
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-black);
@@ -1746,7 +1746,7 @@ button {
 }
 
 .faq-question-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-black);
@@ -1788,7 +1788,7 @@ button {
 
 .faq-answer-inner {
   padding: 0 28px 24px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: #4A4A4A;
   line-height: 1.6;
@@ -1809,7 +1809,7 @@ button {
   color: #FFFFFF;
   border: none;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.85rem;
   cursor: pointer;
@@ -1832,7 +1832,7 @@ button {
 }
 
 .faq-cta-content h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.4rem;
   font-weight: 800;
   margin-bottom: 6px;
@@ -1840,7 +1840,7 @@ button {
 }
 
 .faq-cta-content p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
@@ -1855,7 +1855,7 @@ button {
   color: #FFFFFF;
   border: none;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
@@ -1908,7 +1908,7 @@ button {
   gap: 10px;
 }
 .legal-modal-title h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--color-black);
@@ -1927,14 +1927,14 @@ button {
 .legal-modal-body {
   padding: 28px;
   overflow-y: auto;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: #4A4A4A;
   line-height: 1.6;
 }
 
 .legal-modal-body h4 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-black);
@@ -1957,7 +1957,7 @@ button {
   color: #FFFFFF;
   border: none;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
@@ -3129,7 +3129,7 @@ button {
 }
 
 .trust-headline {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.8rem;
   font-weight: 800;
   color: var(--color-black);
@@ -3137,7 +3137,7 @@ button {
 }
 
 .trust-subtitle {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--color-grey);
   line-height: 1.5;
@@ -3201,7 +3201,7 @@ button {
 }
 
 .trust-logo-meta h4 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 800;
   color: var(--color-black);
@@ -3209,7 +3209,7 @@ button {
 }
 
 .trust-logo-meta p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--color-grey);
   margin-bottom: 8px;
@@ -3220,7 +3220,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--color-black);
@@ -3262,7 +3262,7 @@ button {
 }
 
 .score-num {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 2.2rem;
   font-weight: 800;
   color: var(--color-black);
@@ -3275,7 +3275,7 @@ button {
 }
 
 .google-review-count {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--color-grey);
   margin-top: 4px;
@@ -3287,7 +3287,7 @@ button {
   color: #FFFFFF;
   border: none;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
@@ -3309,7 +3309,7 @@ button {
   color: var(--color-black);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 700;
   text-decoration: none;
@@ -3360,14 +3360,14 @@ button {
   flex: 1;
 }
 .reviewer-meta h4 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 800;
   color: var(--color-black);
   margin: 0;
 }
 .reviewer-country {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--color-grey);
   margin: 2px 0 0;
@@ -3377,7 +3377,7 @@ button {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 700;
   color: #34A853;
@@ -3396,7 +3396,7 @@ button {
 
 .trip-tag-pill {
   margin-left: auto;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--color-accent);
@@ -3406,7 +3406,7 @@ button {
 }
 
 .review-card-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.98rem;
   font-weight: 800;
   color: var(--color-black);
@@ -3415,7 +3415,7 @@ button {
 }
 
 .review-card-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   color: #4A4A4A;
   line-height: 1.55;
@@ -3445,7 +3445,7 @@ button {
 }
 
 .review-modal-header h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--color-black);
@@ -3472,7 +3472,7 @@ button {
 
 .star-picker-container label {
   display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-black);
@@ -3486,7 +3486,7 @@ button {
 }
 
 .rating-desc-pill {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-accent);
@@ -3509,7 +3509,7 @@ button {
 }
 
 .form-group label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--color-black);
@@ -3522,7 +3522,7 @@ button {
   padding: 12px 16px;
   border: 1.5px solid rgba(0, 0, 0, 0.12);
   border-radius: 14px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--color-black);
   background: #FAFAFA;
@@ -3545,7 +3545,7 @@ button {
   color: #FFFFFF;
   border: none;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
@@ -3564,7 +3564,7 @@ button {
 .review-success-body {
   padding: 48px 28px;
   text-align: center;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
 }
 .review-success-body h3 {
   font-size: 1.4rem;
@@ -3626,7 +3626,7 @@ button {
   backdrop-filter: blur(8px);
   color: #FFFFFF;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 700;
 }
@@ -3635,7 +3635,7 @@ button {
   padding: 24px;
 }
 .team-info h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.2rem;
   font-weight: 800;
   color: var(--color-black);
@@ -3643,14 +3643,14 @@ button {
 }
 .team-role {
   display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-accent);
   margin-bottom: 12px;
 }
 .team-info p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   color: #4A4A4A;
   line-height: 1.5;
@@ -3686,14 +3686,14 @@ button {
   flex: 1;
 }
 .promise-text h4 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.15rem;
   font-weight: 800;
   color: #FFFFFF;
   margin-bottom: 4px;
 }
 .promise-text p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
@@ -3705,7 +3705,7 @@ button {
   color: #FFFFFF;
   border: none;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 700;
   cursor: pointer;
@@ -3769,7 +3769,7 @@ button {
   background: var(--color-black);
   color: #FFFFFF;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 800;
 }
@@ -3781,7 +3781,7 @@ button {
 }
 
 .case-client {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -3791,7 +3791,7 @@ button {
 }
 
 .case-info-col h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--color-black);
@@ -3799,7 +3799,7 @@ button {
 }
 
 .case-route {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--color-grey);
   margin-bottom: 16px;
@@ -3818,7 +3818,7 @@ button {
 }
 
 .case-highlights li {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   color: #4A4A4A;
   display: flex;
@@ -3833,7 +3833,7 @@ button {
   color: #FFFFFF;
   border: none;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
@@ -3919,14 +3919,14 @@ button {
 
 .map-float-row strong {
   display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 800;
   color: var(--color-black);
 }
 
 .map-float-row p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   color: var(--color-grey);
   margin: 2px 0 0;
@@ -3951,7 +3951,7 @@ button {
   padding: 7px 12px;
   background: rgba(0, 0, 0, 0.04);
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--color-black);
@@ -3972,7 +3972,7 @@ button {
   background: var(--color-black);
   color: #FFFFFF;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 700;
   text-decoration: none;
@@ -3986,7 +3986,7 @@ button {
 
 /* Utilities */
 .section-sub-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   color: #555;
   margin-top: 12px;
@@ -4013,7 +4013,7 @@ button {
 }
 
 .trust-headline {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 800;
   color: var(--color-black);
@@ -4021,7 +4021,7 @@ button {
 }
 
 .trust-subtitle {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
@@ -4063,7 +4063,7 @@ button {
 }
 
 .trust-logo-meta h4 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   font-weight: 800;
   color: var(--color-black);
@@ -4071,7 +4071,7 @@ button {
 }
 
 .trust-logo-meta p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: #666;
   margin-bottom: 16px;
@@ -4085,7 +4085,7 @@ button {
   padding: 6px 12px;
   background-color: #F0F4F8;
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-black);
@@ -4103,7 +4103,7 @@ button {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 100px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 800;
   text-transform: uppercase;
