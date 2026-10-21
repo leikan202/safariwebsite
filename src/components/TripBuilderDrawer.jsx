@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Send, MapPin, Compass, Check, Calendar, Users, MessageSquare, ChevronDown } from 'lucide-react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 import SafariCalendarPicker from './SafariCalendarPicker';
@@ -62,6 +62,20 @@ export default function TripBuilderDrawer() {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('drawer-open');
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.classList.remove('drawer-open');
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.classList.remove('drawer-open');
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const totalSteps = 4;
@@ -92,14 +106,19 @@ export default function TripBuilderDrawer() {
 
   return (
     <div className={`drawer-overlay ${isOpen ? 'active' : ''}`} onClick={(e) => { if (e.target === e.currentTarget) closeDrawer(); }}>
-      <div className="quiz-drawer" style={{ maxWidth: '640px' }}>
+      <div className="quiz-drawer">
+        {/* Mobile Pull Handle */}
+        <div className="drawer-mobile-handle-bar">
+          <div className="drawer-mobile-handle"></div>
+        </div>
+
         {/* Drawer Header */}
-        <div className="drawer-header" style={{ padding: '24px 28px', borderBottom: '1px solid rgba(216, 195, 165, 0.3)' }}>
+        <div className="drawer-header">
           <div>
-            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.65rem', color: 'var(--color-primary)', fontWeight: 600, margin: 0 }}>
+            <h3 className="drawer-headline">
               Plan Your Safari
             </h3>
-            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.78rem', color: 'var(--color-grey)', letterSpacing: '0.12em', textTransform: 'uppercase', margin: '4px 0 0' }}>
+            <p className="drawer-step-indicator">
               Step {activeStep} of {totalSteps}
             </p>
           </div>
@@ -108,7 +127,7 @@ export default function TripBuilderDrawer() {
           </button>
         </div>
 
-        <div className="quiz-container" style={{ padding: '28px 28px 40px' }}>
+        <div className="quiz-container">
           
           {/* ====================================================
               STEP 1: WHERE WOULD YOU LIKE TO TRAVEL?

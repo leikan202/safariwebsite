@@ -7,123 +7,38 @@ export default function OurStory() {
   return (
     <>
       <section 
-        className="enkop-difference-section" 
+        className="enkop-story-section" 
         id="our-story" 
-        style={{ 
-          position: 'relative', 
-          backgroundColor: 'var(--color-bg-light)', 
-          overflow: 'hidden',
-          minHeight: '440px',
-          display: 'flex',
-          alignItems: 'center'
-        }}
       >
-        {/* Right Panoramic Photo with seamless feathered gradient fade */}
-        <div 
-          style={{ 
-            position: 'absolute', 
-            top: 0, 
-            right: 0, 
-            width: '65%', 
-            height: '100%', 
-            zIndex: 1,
-            pointerEvents: 'none'
-          }}
-        >
+        {/* Panoramic Photo with seamless feathered gradient fade */}
+        <div className="enkop-story-img-wrapper">
           <img 
             src={kilimanjaroImg} 
-            alt="Kilimanjaro savannah landscape" 
+            alt="Kilimanjaro savannah landscape with zebras" 
+            className="enkop-story-img"
             loading="lazy"
             decoding="async"
-            style={{ 
-              width: '100%', 
-              height: '100%', 
-              objectFit: 'cover', 
-              objectPosition: 'center right' 
-            }} 
           />
-          {/* Feathered gradient mask dissolving Ivory into photo */}
-          <div 
-            style={{ 
-              position: 'absolute', 
-              top: 0, 
-              left: 0, 
-              width: '100%', 
-              height: '100%', 
-              background: 'linear-gradient(to right, var(--color-bg-light) 0%, var(--color-bg-light) 25%, rgba(248, 245, 239, 0.75) 45%, rgba(248, 245, 239, 0) 80%)' 
-            }} 
-          />
+          <div className="enkop-story-mask" />
         </div>
 
-        {/* Left Narrative Content */}
-        <div 
-          className="container" 
-          style={{ 
-            position: 'relative', 
-            zIndex: 2, 
-            maxWidth: '1240px', 
-            margin: '0 auto', 
-            padding: '70px 24px', 
-            width: '100%' 
-          }}
-        >
-          <div style={{ maxWidth: '520px', textAlign: 'left' }}>
-            <p 
-              style={{ 
-                fontFamily: 'var(--font-sans)', 
-                fontSize: '0.78rem', 
-                fontWeight: 600, 
-                letterSpacing: '0.2em', 
-                textTransform: 'uppercase', 
-                color: 'var(--color-grey)', 
-                marginBottom: '14px' 
-              }}
-            >
+        {/* Narrative Content */}
+        <div className="container enkop-story-container">
+          <div className="enkop-story-content">
+            <p className="enkop-story-kicker">
               THE ENKOP DIFFERENCE
             </p>
-            <h2 
-              style={{ 
-                fontFamily: 'var(--font-display)', 
-                fontSize: 'clamp(2.4rem, 3.5vw, 3.2rem)', 
-                color: 'var(--color-primary)', 
-                lineHeight: 1.15, 
-                fontWeight: 400, 
-                marginBottom: '20px' 
-              }}
-            >
+            <h2 className="enkop-story-title">
               More than a safari.
             </h2>
-            <p 
-              style={{ 
-                fontFamily: 'var(--font-sans)', 
-                fontSize: '0.92rem', 
-                lineHeight: 1.75, 
-                color: '#4A4A4A', 
-                marginBottom: '32px' 
-              }}
-            >
-              We believe Africa isn't simply a destination to visit. It is a place to feel, discover and remember. Enkop Safaris creates journeys that bring together wildlife, culture, landscape and exceptional hospitality — thoughtfully designed around you.
+            <p className="enkop-story-lead">
+              Africa is more than a destination—it is a feeling to remember. We craft intimate journeys uniting iconic wildlife, rich culture, and heartfelt hospitality.
             </p>
 
             <button 
+              type="button"
               onClick={() => setShowFullStory(true)}
-              style={{ 
-                display: 'inline-flex', 
-                alignItems: 'center', 
-                gap: '10px', 
-                backgroundColor: 'var(--color-secondary)', 
-                color: '#FFFFFF', 
-                padding: '13px 28px', 
-                fontFamily: 'var(--font-sans)', 
-                fontSize: '0.75rem', 
-                fontWeight: 600, 
-                letterSpacing: '0.16em', 
-                textTransform: 'uppercase', 
-                border: 'none', 
-                borderRadius: 0, 
-                cursor: 'pointer',
-                transition: 'background-color 0.2s ease'
-              }}
+              className="enkop-story-btn"
             >
               <span>Our Story</span>
               <span>&rarr;</span>
@@ -135,58 +50,28 @@ export default function OurStory() {
       {/* Full Story Modal */}
       {showFullStory && (
         <div 
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(31, 58, 50, 0.75)',
-            backdropFilter: 'blur(4px)',
-            zIndex: 9999,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '24px'
-          }}
+          className="enkop-story-modal-overlay"
           onClick={() => setShowFullStory(false)}
         >
           <div 
-            style={{
-              backgroundColor: 'var(--color-bg-light)',
-              maxWidth: '680px',
-              width: '100%',
-              padding: '48px 40px',
-              maxHeight: '90vh',
-              overflowY: 'auto',
-              borderRadius: 0,
-              border: '1px solid var(--color-accent)',
-              position: 'relative'
-            }}
+            className="enkop-story-modal-card"
             onClick={(e) => e.stopPropagation()}
           >
             <button
+              type="button"
               onClick={() => setShowFullStory(false)}
-              style={{
-                position: 'absolute',
-                top: '20px',
-                right: '20px',
-                background: 'none',
-                border: 'none',
-                fontSize: '24px',
-                cursor: 'pointer',
-                color: 'var(--color-secondary)'
-              }}
+              className="enkop-story-modal-close"
+              aria-label="Close story"
             >
               &times;
             </button>
-            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--color-grey)', marginBottom: '12px' }}>
+            <p className="enkop-story-modal-kicker">
               OUR HERITAGE
             </p>
-            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: 'var(--color-primary)', marginBottom: '24px' }}>
+            <h3 className="enkop-story-modal-title">
               Good by Nature
             </h3>
-            <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.95rem', lineHeight: '1.8', color: '#3A3A3A', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div className="enkop-story-modal-body">
               <p>
                 Enkop Safaris was born from a deep love for the land, people and wild places of Africa.
                 The name <em>Enkop</em> speaks to home and country — a place of belonging.

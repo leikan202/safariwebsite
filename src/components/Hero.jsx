@@ -17,11 +17,12 @@ export default function Hero() {
       <div className="hero-content">
         <p className="hero-eyebrow">Kenya &middot; East Africa</p>
         <h1 className="hero-title">Bespoke<br />Kenyan Safaris</h1>
-        <a href="#destinations" className="hero-scroll-cta">
-          <span>Explore</span>
-          <ArrowDown size={14} />
-        </a>
       </div>
+
+      <a href="#destinations" className="hero-scroll-cta" aria-label="Explore destinations">
+        <span>Explore</span>
+        <ArrowDown size={14} />
+      </a>
     </section>
   );
 }

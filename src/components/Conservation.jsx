@@ -17,7 +17,7 @@ export default function Conservation() {
         <p className="section-label" style={{ color: 'rgba(255,255,255,0.8)' }}>RESPONSIBLE TOURISM</p>
         <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', color: '#fff' }}>Protecting what we love.</h2>
         <p className="conservation-body">
-          We are deeply committed to the conservation of Kenya's wildlife and the empowerment of local communities. A percentage of every safari booked goes directly into anti-poaching initiatives and community education.
+          A portion of every safari directly funds anti-poaching rangers and local community education.
         </p>
         <LiquidGlassButton
           className="btn-gold"

@@ -15,67 +15,67 @@ const FAQ_ITEMS = [
   {
     category: 'planning',
     question: 'What is the best month to see the Great Migration in Maasai Mara?',
-    answer: 'The Great Wildebeest Migration typically arrives in the Maasai Mara from Tanzania’s Serengeti between July and August, remaining through October. July–August offers peak dramatic Mara River crossings, while September–October provides abundant predator action across golden savannah plains. Please note that as a natural wildlife event, exact timing depends heavily on seasonal rainfall and cannot be fully guaranteed.'
+    answer: 'The Great Migration typically arrives in the Mara between July and October. July–August features dramatic river crossings, while September–October offers peak predator action on golden plains.'
   },
   {
     category: 'planning',
     question: 'How far in advance should I book my Kenya safari?',
-    answer: 'For peak season travel (July–October and December–January), we recommend booking 6 to 9 months in advance to secure top luxury tented camps and private conservancies. However, because we work directly with licensed guides, we can also accommodate last-minute bookings subject to lodge availability.'
+    answer: 'For peak months (July–October & December–January), book 6 to 9 months ahead. We can also accommodate last-minute bookings based on lodge availability.'
   },
   {
     category: 'booking',
     question: 'Why should I book directly with Enkop Safaris instead of a travel agency?',
-    answer: 'Booking directly connects you straight to licensed local driver-guides without third-party commission markups. You get 100% transparent pricing, a custom-crafted itinerary tailored to your exact budget, and direct WhatsApp communication with the team on the ground.'
+    answer: 'Direct booking connects you straight to licensed Kenyan driver-guides with no middleman commissions, transparent rates, and immediate WhatsApp support.'
   },
   {
     category: 'booking',
     question: 'What payment currencies and methods do you accept?',
-    answer: 'We accept both USD ($) and KES (Kenyan Shillings). Payments can be made securely via International Bank Wire Transfer, Credit/Debit Cards, or local M-Pesa. A 30% deposit secures your booking, with the remaining balance due 30 days prior to arrival.'
+    answer: 'We accept USD ($) and KES via International Bank Wire, Credit/Debit Cards, and M-Pesa. A 30% deposit secures your vehicle and lodges, with the balance due 30 days prior.'
   },
   {
     category: 'booking',
     question: 'What is your deposit & flexible booking policy?',
-    answer: 'We require a 30% deposit to lock in your private 4x4 Land Cruiser and lodge reservations. If your travel dates change, we offer flexible date rebooking options up to 30 days before departure at no extra penalty.'
+    answer: 'A 30% deposit secures your dates. If plans change, we offer flexible date rebooking up to 30 days before departure without extra penalty.'
   },
   {
     category: 'experience',
     question: 'What is included in a custom Enkop Safaris package?',
-    answer: 'Our packages are all-inclusive of private 4x4 Land Cruiser transport with pop-up roof, experienced licensed driver-guide, full-board lodge/camp accommodations, all national park & conservancy entry fees, unlimited game drives, and complimentary bottled water. Many packages also include temporary AMREF Flying Doctors evacuation cover (which provides emergency airlift from the bush to a Nairobi hospital, but does not cover the hospital medical bills).'
+    answer: 'Private 4x4 Land Cruiser with pop-up roof, licensed KPSGA guide, full-board lodges, all park & conservancy fees, unlimited game drives, chilled water, and AMREF emergency air evacuation.'
   },
   {
     category: 'experience',
     question: 'What type of safari vehicle will we be traveling in?',
-    answer: 'You will travel in a custom-built 4x4 Toyota Land Cruiser specially fitted with pop-up roofs for 360-degree game viewing, high ground clearance, wide sliding windows, charging sockets, fridge/cooler box, and long-range HF radio communication.'
+    answer: 'Custom 4WD Toyota Land Cruisers with 360° pop-up roofs, guaranteed window seats (max 6), 220V charging ports, cool box, and long-range VHF radios.'
   },
   {
     category: 'experience',
     question: 'Are your safaris family-friendly for children and seniors?',
-    answer: 'Yes! All our safaris are 100% private, meaning you set the pace of game drives. We pair families with child-friendly guides, recommend lodges with swimming pools and family suites, and tailor daily schedules around rest times.'
+    answer: 'Yes. Every safari is 100% private, allowing you to set the daily pace. We tailor rest stops, lodge choices, and drive lengths around your family.'
   },
   {
     category: 'experience',
     question: 'What should I pack for a Kenya bush safari?',
-    answer: 'We recommend lightweight neutral-colored clothing (khaki, beige, green), a warm jacket or fleece for early morning game drives, comfortable walking shoes, sunscreen, high-SPF lip balm, insect repellent, sunglasses, camera with zoom lens, and binoculars.'
+    answer: 'Neutral earth tones (khaki, olive), a warm morning fleece, comfortable shoes, sunscreen, insect repellent, camera, and sunglasses.'
   },
   {
     category: 'health',
     question: 'Do I need a visa or eTA to enter Kenya?',
-    answer: 'Yes, most foreign visitors require an Electronic Travel Authorisation (eTA) applied online prior to travel via the official Kenya government portal (etakenya.go.go.ke). Processing takes 3 working days, and our team provides step-by-step guidance.'
+    answer: 'Yes. Most travelers require an online Electronic Travel Authorisation (eTA) from etakenya.go.ke before travel. We guide you through the quick process.'
   },
   {
     category: 'health',
     question: 'What vaccinations or health precautions are recommended?',
-    answer: 'Yellow Fever vaccination is required if traveling from a yellow fever endemic country. Routine vaccines and malaria prophylactics are generally advised for safari parks. We strongly recommend consulting your local travel clinic prior to departure.'
+    answer: 'Yellow Fever certificate if coming from an endemic zone, plus standard travel vaccines and malaria prophylactics. Consult your travel clinic.'
   },
   {
     category: 'health',
     question: 'Is travel and medical insurance required?',
-    answer: 'Yes, comprehensive travel insurance is strictly mandatory for all guests. Your policy must cover medical emergencies, hospital bills, trip cancellation, repatriation, and loss of baggage. Enkop Safaris cannot be held liable for medical costs or trip interruptions.'
+    answer: 'Yes. Comprehensive personal travel insurance covering emergency medical expenses, cancellations, and baggage is mandatory for all travelers.'
   },
   {
     category: 'logistics',
     question: 'How do airport transfers and inter-park connections work?',
-    answer: 'Our private licensed guide meets you directly at Jomo Kenyatta International Airport (JKIA) or Wilson Airport with a personalized name board. We handle all seamless transfers between Nairobi, national parks, and coastal destinations (Diani, Watamu) via 4x4 Cruiser or domestic bush flights.'
+    answer: 'Your dedicated guide meets you at JKIA or Wilson Airport. We coordinate all road transfers in our 4x4 Land Cruisers and book domestic bush flights.'
   }
 ];
 

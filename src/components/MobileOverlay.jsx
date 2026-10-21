@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { MessageSquare, X } from 'lucide-react';
 import { useTripBuilder } from '../context/TripBuilderContext';
@@ -7,6 +7,20 @@ export default function MobileOverlay({ isOpen, onClose }) {
   const { openDrawer } = useTripBuilder();
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('mobile-menu-open');
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -46,9 +60,25 @@ export default function MobileOverlay({ isOpen, onClose }) {
   return (
     <div className={`nav-overlay ${isOpen ? 'active' : ''}`}>
       <div className="nav-overlay-inner">
-        <button className="nav-close" onClick={onClose} aria-label="Close menu">
-          <X size={32} />
-        </button>
+        <div className="overlay-header">
+          <Link
+            to="/"
+            className="overlay-logo"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick('');
+            }}
+          >
+            <img
+              src="/enkop-logo-transparent.png"
+              alt="Enkop Safaris"
+              className="overlay-logo-img"
+            />
+          </Link>
+          <button className="nav-close" onClick={onClose} aria-label="Close menu">
+            <X size={24} />
+          </button>
+        </div>
 
         <nav className="overlay-nav">
           <a href="/" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick(''); }}>Home</a>

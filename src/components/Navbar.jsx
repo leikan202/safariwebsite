@@ -70,10 +70,10 @@ export default function Navbar({ onOpenMobileMenu }) {
         </Link>
 
         <nav className="nav-links">
-          <a href="/" onClick={(e) => handleNavClick(e, '')}>Home</a>
-          <Link to="/itineraries">Safaris</Link>
+          <a href="/" onClick={(e) => handleNavClick(e, '')} className={location.pathname === '/' && !location.hash ? 'active' : ''}>Home</a>
+          <Link to="/itineraries" className={location.pathname === '/itineraries' ? 'active' : ''}>Safaris</Link>
           <a href="/#destinations" onClick={(e) => handleNavClick(e, '#destinations')}>Destinations</a>
-          <Link to="/4x4-landcruisers">4x4 Fleet</Link>
+          <Link to="/4x4-landcruisers" className={location.pathname === '/4x4-landcruisers' ? 'active' : ''}>4x4 Fleet</Link>
           <a href="/#our-story" onClick={(e) => handleNavClick(e, '#our-story')}>Our Story</a>
           <a href="/#contact" onClick={(e) => handleNavClick(e, '#contact')}>Contact</a>
         </nav>

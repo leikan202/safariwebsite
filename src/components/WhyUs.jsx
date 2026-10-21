@@ -16,7 +16,7 @@ export default function WhyUs() {
               <div className="feature-text">
                 <h4>Born of This Land</h4>
                 <p>
-                  Kenya is not simply our workplace — it is our home. Guided by lifelong Kenyan naturalists with generational knowledge of wildlife corridors and seasonal movements, you experience the bush through the eyes of those who belong to it.
+                  Lifelong Kenyan naturalists with generational knowledge of wildlife corridors and seasonal movements.
                 </p>
               </div>
             </div>
@@ -27,7 +27,7 @@ export default function WhyUs() {
               <div className="feature-text">
                 <h4>Thoughtfully Tailored</h4>
                 <p>
-                  True luxury is stillness, exclusivity, and unhurried time. We curate every journey around your personal rhythm — handpicking private conservancies, boutique wilderness camps, and dawn moments that can never be replicated.
+                  Bespoke pacing, private conservancies, and boutique wilderness camps curated around your personal rhythm.
                 </p>
               </div>
             </div>
@@ -38,7 +38,7 @@ export default function WhyUs() {
               <div className="feature-text">
                 <h4>Good by Nature</h4>
                 <p>
-                  At our core is the ostrich — in Maa, <em>Esidai</em>, meaning 'good'. We partner with community-owned conservancies and local preservation initiatives, ensuring your presence leaves a lasting, positive footprint on the wild and its people.
+                  Direct partnerships with community-owned conservancies ensuring your presence empowers local wildlife and people.
                 </p>
               </div>
             </div>

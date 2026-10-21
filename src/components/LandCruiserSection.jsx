@@ -15,7 +15,7 @@ export default function LandCruiserSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.05, rootMargin: '100px 0px 50px 0px' }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -41,7 +41,7 @@ export default function LandCruiserSection() {
           <p className="cruiser-fade-kicker">OUR SAFARI FLEET</p>
           <h2 className="cruiser-fade-title">Custom 4x4 Safari Land Cruisers</h2>
           <p className="cruiser-fade-lead">
-            In East Africa's premier wildlife reserves, your vehicle is your mobile observation base. All Enkop Safaris journeys are conducted in purpose-built 4WD Toyota Land Cruisers, customized specifically for Kenya's rugged savannah terrain to ensure unhurried wildlife viewing, telephoto photography freedom, and passenger comfort.
+            Custom-engineered for Kenya's savannah. Every Enkop safari is conducted exclusively in private 4WD Toyota Land Cruisers designed for unhurried wildlife viewing and photography.
           </p>
 
           <div className="cruiser-fade-features">
@@ -50,9 +50,9 @@ export default function LandCruiserSection() {
                 <Camera size={18} color="var(--color-secondary)" />
               </div>
               <div className="cruiser-fade-feature-text">
-                <h4>Pop-Up Roof for 360&deg; Viewing</h4>
+                <h4>360&deg; Pop-Up Photo Roof</h4>
                 <p>
-                  Elevating canvas-shaded roof hatch provides full standing room and unobstructed panoramic sightlines for tracking wildlife and steady camera lens support.
+                  Full standing height with steady rests for telephoto lenses and panoramic viewing.
                 </p>
               </div>
             </div>
@@ -62,9 +62,9 @@ export default function LandCruiserSection() {
                 <Users size={18} color="var(--color-secondary)" />
               </div>
               <div className="cruiser-fade-feature-text">
-                <h4>Guaranteed Window Seating (Max 6)</h4>
+                <h4>Guaranteed Window Seats (Max 6)</h4>
                 <p>
-                  Strictly capped at six guests per vehicle—never middle seats. Every traveler enjoys a dedicated window seat, wide sliding glass, and personal legroom.
+                  Never middle seats. Dedicated sliding windows and generous legroom for every guest.
                 </p>
               </div>
             </div>
@@ -74,9 +74,9 @@ export default function LandCruiserSection() {
                 <Zap size={18} color="var(--color-secondary)" />
               </div>
               <div className="cruiser-fade-feature-text">
-                <h4>Onboard Power &amp; Cold Water</h4>
+                <h4>220V Inverter &amp; Cool Box</h4>
                 <p>
-                  Equipped with 220V inverter power sockets and USB ports for charging camera batteries on game drives, plus an insulated cool box with chilled drinking water.
+                  Charge camera batteries and phones on game drives, with chilled spring water always ready.
                 </p>
               </div>
             </div>

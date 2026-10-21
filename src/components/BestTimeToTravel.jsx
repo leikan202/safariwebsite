@@ -14,7 +14,7 @@ export default function BestTimeToTravel() {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.05, rootMargin: '100px 0px 50px 0px' }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -44,7 +44,7 @@ export default function BestTimeToTravel() {
           <p className="cruiser-fade-kicker">TRAVEL SEASONS</p>
           <h2 className="cruiser-fade-title">When is the Best Time to Go?</h2>
           <p className="cruiser-fade-lead">
-            Kenya offers spectacular year-round wildlife viewing. However, specific natural events like the Great Migration and seasonal rains play a huge role in shaping your safari experience.
+            Kenya offers incredible wildlife year-round. Choose your timing based on migration river crossings, predator action, or emerald green landscapes.
           </p>
 
           <div className="cruiser-fade-features">
@@ -55,7 +55,7 @@ export default function BestTimeToTravel() {
               <div className="cruiser-fade-feature-text">
                 <h4>Peak Season (July &mdash; October)</h4>
                 <p>
-                  The Great Migration arrives in the Maasai Mara. Animals congregate around water sources, making predator sightings incredibly frequent. High demand; early booking is essential.
+                  Great Migration river crossings, concentrated wildlife at waterholes, and prime predator action.
                 </p>
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function BestTimeToTravel() {
               <div className="cruiser-fade-feature-text">
                 <h4>Green Season (November &mdash; May)</h4>
                 <p>
-                  The "short" and "long" rains transform the savannah into a vibrant green paradise. Prime birdwatching, newborn calving season, and incredible light for photography.
+                  Emerald savannah landscapes, newborn calving season, vibrant birding, and quieter reserves.
                 </p>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function BestTimeToTravel() {
               <div className="cruiser-fade-feature-text">
                 <h4>Insider Tip: Jan &mdash; March</h4>
                 <p>
-                  Our best-kept secret for safaris. Expect dry weather, fantastic wildlife viewing, and far fewer crowds compared to the July/August peak months.
+                  Warm, dry weather with exceptional big cat sightings and far fewer tourist vehicles.
                 </p>
               </div>
             </div>

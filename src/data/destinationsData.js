@@ -20,7 +20,7 @@ export const DESTINATION_DETAILS = {
     image: imgMara,
     bestTime: 'July to October (River Crossings) & January–March (Lions & Calving)',
     stay: 'Angama Mara, Mara Plains, Governors’ IL Moran & Mara North Tented Bush Camps',
-    overview: 'Spanning over 1,500 square kilometers, the Maasai Mara ecosystem is an untamed sanctuary of rolling savannah, acacia woodlands, and the life-giving Mara River. Beyond the core national reserve lie exclusive community-owned conservancies (Mara North, Olare Motorogi, and Naboisho) where strict vehicle limits and off-road tracking guarantee authentic wilderness solitude.',
+    overview: 'Rolling acacia savannah and the Mara River—the ancestral stage for the Great Migration and Africa’s densest predator territories.',
     highlights: [
       { title: 'The Great Migration Crossings', desc: 'Over 1.5 million wildebeest and zebras navigating crocodile-filled Mara River currents.' },
       { title: 'Big Cat Coalitions', desc: 'Renowned Marsh and Topi lion prides, solitary leopards along riverine loops, and cheetah coalitions on the plains.' },
@@ -237,7 +237,7 @@ export const DESTINATION_DETAILS = {
     image: imgAmboseli,
     bestTime: 'June to October & January to February (Clear mountain vistas and dry pan crossings)',
     stay: 'Tortilis Camp, Ol Tukai Lodge, Amboseli Serena & Satao Elerai Conservancy',
-    overview: 'Nestled directly in the northern shadow of Mount Kilimanjaro (Africa’s highest peak at 5,895m), Amboseli is celebrated worldwide for its ancient elephant populations, studied continuously for over 50 years. Underground meltwater springs from Kilimanjaro feed permanent green marshes (Enkongo Narok and Olokenya), drawing hippos, buffalo, pelicans, and waterbirds in striking contrast to the surrounding arid plains.',
+    overview: 'Framed beneath snow-capped Mount Kilimanjaro, Amboseli is world-famous for free-roaming giant elephant dynasties and freshwater marshes.',
     highlights: [
       { title: 'Kilimanjaro Sunrise Backdrops', desc: 'Crystal-clear early morning photography with Africa’s highest snow-capped peak dominating the horizon.' },
       { title: 'Ancient Big Tuskers', desc: 'Habituated multi-generational elephant herds featuring some of the continent’s last remaining super-tuskers.' },
@@ -439,7 +439,7 @@ export const DESTINATION_DETAILS = {
     image: imgNorthernKenya,
     bestTime: 'Year-Round (Optimal dry game viewing June–October & December–March)',
     stay: 'Saruni Samburu, Sasaab, Segera Retreat, Lewa Wilderness & Ol Pejeta Bush Camp',
-    overview: 'North of Mount Kenya lies one of Africa’s greatest conservation success stories. From the red-earth savannahs of Samburu and Buffalo Springs bisected by the Ewaso Ng’iro River, to the vast private conservancies of Laikipia and Lewa, this frontier offers unmatched wilderness privacy, black rhino sanctuaries, and rare desert-adapted species found nowhere else in southern East Africa.',
+    overview: 'An untamed frontier of sacred mountains, red-clay gorges, and endemic wildlife found nowhere else in southern East Africa.',
     highlights: [
       { title: 'The Samburu Special Five', desc: 'Gerenuk (giraffe gazelle), Grevy’s zebra, reticulated giraffe, beisa oryx, and the blue-shanked Somali ostrich.' },
       { title: 'Lewa & Ol Pejeta Rhino Solitude', desc: 'Home to the planet’s largest populations of endangered black rhinos and the world’s last remaining Northern White Rhinos.' },
@@ -668,7 +668,7 @@ export const DESTINATION_DETAILS = {
     image: imgDiani,
     bestTime: 'October to April (Warm turquoise sea waters, calm winds & optimal visibility)',
     stay: 'Alfajiri Villas, The Sands at Nomad, AfroChic Diani & WaterLovers Beach Resort',
-    overview: 'Voted Africa’s leading beach destination for consecutive years, Diani Beach is the quintessential grand finale to an East African bush safari. Located 30 kilometers south of Mombasa, Diani’s dazzling white coral sand is protected by an offshore coral barrier reef, creating calm, crystal-clear turquoise lagoons ideal for swimming, kite surfing, and private dhow excursions.',
+    overview: '17 kilometers of continuous white coral sand, turquoise lagoon reefs, and barefoot post-safari relaxation on the Indian Ocean.',
     highlights: [
       { title: 'Powder-White Sand & Warm Ocean', desc: 'Uninterrupted 17-kilometer stretch of soft coral beach kissed by the balmy waters of the Indian Ocean.' },
       { title: 'Kisite-Mpunguti Marine Safari', desc: 'Traditional wooden dhow cruise to marine parks for wild dolphin encounters and snorkeling alongside sea turtles.' },

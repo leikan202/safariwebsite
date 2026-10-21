@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   X, MapPin, ArrowRight, Plane, Clock, ShieldCheck, Compass, Sparkles,
@@ -11,6 +11,20 @@ export default function DestinationModal({ destId, onClose }) {
   const { openDrawer } = useTripBuilder();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('field-guide'); // 'field-guide' | 'logistics'
+
+  useEffect(() => {
+    if (destId) {
+      document.body.classList.add('modal-open');
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.classList.remove('modal-open');
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.classList.remove('modal-open');
+      document.body.style.overflow = '';
+    };
+  }, [destId]);
 
   if (!destId) return null;
   const data = getDestination(destId);

@@ -96,7 +96,7 @@ export default function ItinerariesPage() {
           <p className="itineraries-kicker">KENYA SAFARI ITINERARIES &middot; PRIVATE 4X4 EXPEDITIONS</p>
           <h1 className="itineraries-title">Curated Safari Circuits</h1>
           <p className="itineraries-lead">
-            Every itinerary is a bespoke private journey conducted exclusively in our custom 4WD Toyota Land Cruisers, led by licensed Kenyan naturalist driver-guides. Dates and pacing are fully customizable.
+            Private expeditions in custom 4WD Land Cruisers led by licensed Kenyan naturalists. Fully customizable pacing and dates.
           </p>
         </header>
 
