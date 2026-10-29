@@ -1,0 +1,28 @@
+# Cache rules for Vite static assets (1 year immutable)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache rules for fonts and images
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML shell must always revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Global security headers
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
