@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTripBuilder } from '../context/TripBuilderContext';
-import DestinationModal from './DestinationModal';
+const DestinationModal = React.lazy(() => import('./DestinationModal'));
 
 import imgMara from '../../assets/images/leonard-von-bibra-L4-BDd01wmM-unsplash.jpg';
 import imgAmboseli from '../../assets/images/neil-and-zulma-scott-hjv3VO-jpnc-unsplash.jpg';
@@ -36,7 +36,7 @@ export default function Destinations() {
 
   return (
     <section className="destinations-section" id="destinations">
-      <div className="dest-grid">
+      <div className="dest-grid reveal-stagger">
         {destinations.map((dest) => (
           <div
             className="dest-card"
@@ -52,7 +52,9 @@ export default function Destinations() {
         ))}
       </div>
 
-      <DestinationModal destId={activeModal} onClose={() => setActiveModal(null)} />
+      <React.Suspense fallback={null}>
+        <DestinationModal destId={activeModal} onClose={() => setActiveModal(null)} />
+      </React.Suspense>
     </section>
   );
 }

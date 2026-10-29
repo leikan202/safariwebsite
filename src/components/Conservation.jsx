@@ -13,7 +13,7 @@ export default function Conservation() {
         style={{ backgroundImage: `url(${imgConservation})` }}
       ></div>
       <div className="conservation-overlay"></div>
-      <div className="container conservation-content">
+      <div className="container conservation-content reveal-up">
         <p className="section-label" style={{ color: 'rgba(255,255,255,0.8)' }}>RESPONSIBLE TOURISM</p>
         <h2 className="hero-title" style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', color: '#fff' }}>Protecting what we love.</h2>
         <p className="conservation-body">

@@ -7,7 +7,7 @@ export default function Intro() {
 
   return (
     <section className="intro-section">
-      <div className="container intro-inner">
+      <div className="container intro-inner reveal-up">
         <p className="section-label">Enkop Safaris</p>
         <h2 className="intro-headline">Expert-led journeys across<br />Kenya's finest wilderness.</h2>
         <p className="intro-body">

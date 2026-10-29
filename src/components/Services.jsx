@@ -34,11 +34,11 @@ export default function Services() {
   return (
     <section className="services-section" id="services">
       <div className="container">
-        <div className="section-header-center">
+        <div className="section-header-center reveal-up">
           <p className="section-label">BEYOND THE BUSH</p>
           <h2 className="section-headline">Our Expertise</h2>
         </div>
-        <div className="services-grid">
+        <div className="services-grid reveal-stagger">
           {servicesData.map((service, index) => (
             <div
               className="service-card"

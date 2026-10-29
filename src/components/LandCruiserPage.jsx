@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Camera, Zap, Shield, MessageSquare } from 'lucide-react';
 import { useTripBuilder } from '../context/TripBuilderContext';
+import SEO from './SEO';
 import deniceAlexImg from '../../assets/images/denice-alex-rlr0oaz2nZQ-unsplash.jpg';
 
 export default function LandCruiserPage() {
@@ -20,10 +21,21 @@ export default function LandCruiserPage() {
 
   return (
     <div className="cruiser-custom-page">
+      <SEO
+        title="Custom 4x4 Safari Land Cruisers & Fleet"
+        description="Experience East Africa in custom 4WD Toyota Land Cruisers with 360° pop-up observation roofs, guaranteed window seats, 220V charging inverters, and long-range VHF radios."
+        keywords="safari Land Cruiser Kenya, 4x4 safari vehicle Kenya, custom pop-up roof safari vehicle, private safari Land Cruiser hire"
+        canonical="https://safaridirectkenya.com/4x4-landcruisers"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: '4x4 Fleet', item: '/4x4-landcruisers' }
+        ]}
+      />
+
       <div className="cruiser-page-wrapper">
         
         {/* Top Header / Breadcrumb Area */}
-        <header className="cruiser-editorial-header">
+        <header className="cruiser-editorial-header reveal-up">
           <p className="cruiser-sub-kicker">EXPEDITION FLEET</p>
           <h1 className="cruiser-main-title">The Savannah Observation Base</h1>
           <p className="cruiser-main-subtitle">
@@ -31,7 +43,7 @@ export default function LandCruiserPage() {
           </p>
 
           {/* 4 Feature Badges Strip */}
-          <div className="cruiser-badge-strip">
+          <div className="cruiser-badge-strip reveal-stagger">
             <div className="cruiser-badge-item">
               <Users size={14} className="cruiser-badge-icon" />
               <span>Strictly 6 Window Seats</span>

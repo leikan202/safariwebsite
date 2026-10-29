@@ -79,7 +79,7 @@ const FAQ_ITEMS = [
   }
 ];
 
-export default function FAQ() {
+export default function FAQ({ isStandalone = false }) {
   const { openDrawer } = useTripBuilder();
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -99,16 +99,20 @@ export default function FAQ() {
   return (
     <section className="faq-section" id="faq">
       <div className="container">
-        <div className="section-header-center">
+        <div className="section-header-center reveal-up">
           <p className="section-label">FREQUENTLY ASKED QUESTIONS</p>
-          <h2 className="section-headline">Everything You Need to Know</h2>
+          {isStandalone ? (
+            <h1 className="section-headline">Everything You Need to Know</h1>
+          ) : (
+            <h2 className="section-headline">Everything You Need to Know</h2>
+          )}
           <p className="faq-subtitle">
             Got questions about planning your Kenya safari? Here are answers to the most common inquiries from our travelers.
           </p>
         </div>
 
         {/* FAQ Search Bar */}
-        <div className="faq-search-wrapper">
+        <div className="faq-search-wrapper reveal-up delay-1">
           <Search size={18} className="faq-search-icon" />
           <input
             type="text"

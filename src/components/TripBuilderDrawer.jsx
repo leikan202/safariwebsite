@@ -281,18 +281,6 @@ export default function TripBuilderDrawer() {
                 )}
               </div>
 
-              {/* Decorative Brand Reassurance Card */}
-              <div style={{
-                padding: '16px 20px',
-                borderRadius: '14px',
-                backgroundColor: 'rgba(216, 195, 165, 0.08)',
-                border: '1px solid rgba(216, 195, 165, 0.22)',
-                marginBottom: '28px'
-              }}>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.84rem', color: '#F0EDE6', margin: 0, lineHeight: 1.55 }}>
-                  🌿 <strong style={{ color: '#D8C3A5' }}>Good by Nature:</strong> Every itinerary is privately curated by licensed Kenyan driver-guides with private 4x4 vehicles, boutique wilderness stays, and flexible pace.
-                </p>
-              </div>
 
               <div className="quiz-actions-row">
                 <button

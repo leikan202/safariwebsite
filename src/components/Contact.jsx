@@ -14,7 +14,7 @@ export default function Contact() {
         style={{ backgroundImage: `url(${imgContact})` }}
       ></div>
       <div className="contact-overlay"></div>
-      <div className="container contact-content">
+      <div className="container contact-content reveal-up">
         <p className="section-label contact-label">START HERE</p>
         <h2 className="contact-headline">Ready to plan<br />your journey?</h2>
         <p className="contact-body">Tell us your dates, interests and group size. We'll respond within four hours.</p>

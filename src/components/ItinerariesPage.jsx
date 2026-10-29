@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 import { DESTINATION_DETAILS } from '../data/destinationsData';
+import SEO from './SEO';
 
 export default function ItinerariesPage() {
   const { openDrawer } = useTripBuilder();
@@ -80,6 +81,17 @@ export default function ItinerariesPage() {
 
   return (
     <article className="itineraries-page">
+      <SEO
+        title="Curated Kenya Safari Circuits & Itineraries"
+        description="Explore handcrafted Kenya safari circuits: Maasai Mara Big Cats, Amboseli Elephants under Kilimanjaro, Samburu Special Five & Diani Coast. Fully customizable private 4x4 journeys."
+        keywords="Kenya safari itineraries, Maasai Mara 4-day safari, Amboseli safari package, Samburu safari circuit, Kenya 4x4 safari tours"
+        canonical="https://safaridirectkenya.com/itineraries"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Curated Itineraries', item: '/itineraries' }
+        ]}
+      />
+
       {/* Top Breadcrumb Bar */}
       <div className="itineraries-topbar">
         <div className="container">
@@ -92,7 +104,7 @@ export default function ItinerariesPage() {
 
       <main className="container itineraries-container">
         {/* Editorial Header */}
-        <header className="itineraries-header">
+        <header className="itineraries-header reveal-up">
           <p className="itineraries-kicker">KENYA SAFARI ITINERARIES &middot; PRIVATE 4X4 EXPEDITIONS</p>
           <h1 className="itineraries-title">Curated Safari Circuits</h1>
           <p className="itineraries-lead">

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Compass, Sparkles, ShieldCheck } from 'lucide-react';
+import giraffesImg from '../../assets/images/reggie-b-aUKfubmaU4o-unsplash.jpg';
 
 export default function WhyUs() {
   return (
     <section className="why-us-section" id="why-us">
       <div className="container why-us-inner">
-        <div className="why-us-content">
+        <div className="why-us-content reveal-slide-left">
           <p className="section-label">THE ENKOP DIFFERENCE</p>
           <h2 className="split-headline">Why journey with us?</h2>
-          <div className="features-list">
+          <div className="features-list reveal-stagger">
             <div className="feature-item">
               <div className="feature-icon">
                 <Compass size={22} color="var(--color-secondary)" />
@@ -44,11 +45,12 @@ export default function WhyUs() {
             </div>
           </div>
         </div>
-        <div className="why-us-image">
+        <div className="why-us-image reveal-slide-right">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Safari_in_Kenia_am_Mara_Timbo_Camp%2C_Masai_Mara.JPG"
+            src={giraffesImg}
             loading="lazy"
-            alt="Giraffes grazing peacefully in Kenya"
+            decoding="async"
+            alt="Giraffes grazing peacefully on the Kenyan savannah"
           />
         </div>
       </div>
