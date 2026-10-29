@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import LiquidGlassButton from './LiquidGlassButton';
 import { useTripBuilder } from '../context/TripBuilderContext';
-import imgParallax from '../../assets/images/sneha-cecil-DEBrMzu-D8I-unsplash.jpg';
+import imgParallax from '../../assets/images/sneha-cecil-DEBrMzu-D8I-unsplash.webp';
 
 export default function WildlifeParallax() {
   const { openDrawer } = useTripBuilder();

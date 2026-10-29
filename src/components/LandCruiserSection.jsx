@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Camera, Users, Zap, ArrowRight } from 'lucide-react';
-import deniceAlexImg from '../../assets/images/denice-alex-rlr0oaz2nZQ-unsplash.jpg';
+import deniceAlexImg from '../../assets/images/denice-alex-rlr0oaz2nZQ-unsplash.webp';
 
 export default function LandCruiserSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,6 +31,8 @@ export default function LandCruiserSection() {
           className="cruiser-fade-bg-img"
           loading="lazy"
           decoding="async"
+          width="721"
+          height="480"
         />
         <div className="cruiser-fade-mask" />
       </div>
@@ -50,7 +52,7 @@ export default function LandCruiserSection() {
                 <Camera size={18} color="var(--color-secondary)" />
               </div>
               <div className="cruiser-fade-feature-text">
-                <h4>360&deg; Pop-Up Photo Roof</h4>
+                <h3>360&deg; Pop-Up Photo Roof</h3>
                 <p>
                   Full standing height with steady rests for telephoto lenses and panoramic viewing.
                 </p>
@@ -62,7 +64,7 @@ export default function LandCruiserSection() {
                 <Users size={18} color="var(--color-secondary)" />
               </div>
               <div className="cruiser-fade-feature-text">
-                <h4>Guaranteed Window Seats (Max 6)</h4>
+                <h3>Guaranteed Window Seats (Max 6)</h3>
                 <p>
                   Never middle seats. Dedicated sliding windows and generous legroom for every guest.
                 </p>
@@ -74,7 +76,7 @@ export default function LandCruiserSection() {
                 <Zap size={18} color="var(--color-secondary)" />
               </div>
               <div className="cruiser-fade-feature-text">
-                <h4>220V Inverter &amp; Cool Box</h4>
+                <h3>220V Inverter &amp; Cool Box</h3>
                 <p>
                   Charge camera batteries and phones on game drives, with chilled spring water always ready.
                 </p>

@@ -1,16 +1,16 @@
-import imgMara from '../../assets/images/leonard-von-bibra-L4-BDd01wmM-unsplash.jpg';
-import imgAmboseli from '../../assets/images/neil-and-zulma-scott-hjv3VO-jpnc-unsplash.jpg';
-import imgNorthernKenya from '../../assets/images/polina-koroleva-36DSACYDey0-unsplash.jpg';
-import imgDiani from '../../assets/images/ezekiel-kilimo-m_06_L3cKY0-unsplash.jpg';
+import imgMara from '../../assets/images/leonard-von-bibra-L4-BDd01wmM-unsplash.webp';
+import imgAmboseli from '../../assets/images/neil-and-zulma-scott-hjv3VO-jpnc-unsplash.webp';
+import imgNorthernKenya from '../../assets/images/polina-koroleva-36DSACYDey0-unsplash.webp';
+import imgDiani from '../../assets/images/ezekiel-kilimo-m_06_L3cKY0-unsplash.webp';
 
-import imgMara1 from '../../assets/images/ahmed-galal-8fH4JwxbAyw-unsplash.jpg';
-import imgMara2 from '../../assets/images/ahmed-galal-GMO1Jq3Ajfo-unsplash.jpg';
-import imgAmb1 from '../../assets/images/ana-singh-1vOBJZ6228U-unsplash.jpg';
-import imgAmb2 from '../../assets/images/birger-strahl-r3l0EazQLR4-unsplash.jpg';
-import imgSam1 from '../../assets/images/giusi-borrasi-XlqCl5NO0SM-unsplash.jpg';
-import imgLewa1 from '../../assets/images/helena-pfisterer-mvzxKoxJz_w-unsplash.jpg';
-import imgDiani1 from '../../assets/images/polina-koroleva-g-Jcvkxx0NE-unsplash.jpg';
-import imgDiani2 from '../../assets/images/lukasz-lu8BMgAs64Q-unsplash.jpg';
+import imgMara1 from '../../assets/images/ahmed-galal-8fH4JwxbAyw-unsplash.webp';
+import imgMara2 from '../../assets/images/ahmed-galal-GMO1Jq3Ajfo-unsplash.webp';
+import imgAmb1 from '../../assets/images/ana-singh-1vOBJZ6228U-unsplash.webp';
+import imgAmb2 from '../../assets/images/birger-strahl-r3l0EazQLR4-unsplash.webp';
+import imgSam1 from '../../assets/images/giusi-borrasi-XlqCl5NO0SM-unsplash.webp';
+import imgLewa1 from '../../assets/images/helena-pfisterer-mvzxKoxJz_w-unsplash.webp';
+import imgDiani1 from '../../assets/images/polina-koroleva-g-Jcvkxx0NE-unsplash.webp';
+import imgDiani2 from '../../assets/images/lukasz-lu8BMgAs64Q-unsplash.webp';
 
 export const DESTINATION_DETAILS = {
   mara: {

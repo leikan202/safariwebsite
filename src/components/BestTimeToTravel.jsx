@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Sun, CloudRain, Info } from 'lucide-react';
-import imgWildebeest from '../../assets/images/ahmed-galal-8fH4JwxbAyw-unsplash.jpg';
+import imgWildebeest from '../../assets/images/ahmed-galal-8fH4JwxbAyw-unsplash.webp';
 
 export default function BestTimeToTravel() {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,6 +34,8 @@ export default function BestTimeToTravel() {
           className="cruiser-fade-bg-img"
           loading="lazy"
           decoding="async"
+          width="721"
+          height="432"
         />
         <div className="cruiser-fade-mask" />
       </div>
@@ -53,7 +55,7 @@ export default function BestTimeToTravel() {
                 <Sun size={18} color="var(--color-secondary)" />
               </div>
               <div className="cruiser-fade-feature-text">
-                <h4>Peak Season (July &mdash; October)</h4>
+                <h3>Peak Season (July &mdash; October)</h3>
                 <p>
                   Great Migration river crossings, concentrated wildlife at waterholes, and prime predator action.
                 </p>
@@ -65,7 +67,7 @@ export default function BestTimeToTravel() {
                 <CloudRain size={18} color="var(--color-secondary)" />
               </div>
               <div className="cruiser-fade-feature-text">
-                <h4>Green Season (November &mdash; May)</h4>
+                <h3>Green Season (November &mdash; May)</h3>
                 <p>
                   Emerald savannah landscapes, newborn calving season, vibrant birding, and quieter reserves.
                 </p>
@@ -77,7 +79,7 @@ export default function BestTimeToTravel() {
                 <Info size={18} color="var(--color-secondary)" />
               </div>
               <div className="cruiser-fade-feature-text">
-                <h4>Insider Tip: Jan &mdash; March</h4>
+                <h3>Insider Tip: Jan &mdash; March</h3>
                 <p>
                   Warm, dry weather with exceptional big cat sightings and far fewer tourist vehicles.
                 </p>

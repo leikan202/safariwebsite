@@ -75,6 +75,10 @@ export default function MobileOverlay({ isOpen, onClose }) {
               src="/enkop-logo-transparent.png"
               alt="Enkop Safaris"
               className="overlay-logo-img"
+              width="100"
+              height="66"
+              loading="lazy"
+              decoding="async"
             />
           </Link>
           <button className="nav-close" onClick={onClose} aria-label="Close menu">
@@ -108,6 +112,10 @@ export default function MobileOverlay({ isOpen, onClose }) {
               src="/enkop-logo-transparent.png"
               alt=""
               className="overlay-ostrich-img"
+              width="120"
+              height="80"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="overlay-geometric-band" aria-hidden="true">

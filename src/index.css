@@ -93,7 +93,7 @@ h4, h5, h6 {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--color-accent);
+  color: var(--color-secondary);
   margin-bottom: 24px;
   font-weight: 700;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
-import heroImage from '../../assets/images/melissa-van-niekerk-IOJx2UIKBeA-unsplash.jpg';
+import heroImage from '../../assets/images/melissa-van-niekerk-IOJx2UIKBeA-unsplash.webp';
 
 export default function Hero() {
   return (

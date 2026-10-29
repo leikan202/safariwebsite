@@ -53,6 +53,10 @@ export default function Footer() {
                 src="/enkop-logo-transparent.png" 
                 alt="Enkop Safaris" 
                 className="footer-brand-logo" 
+                width="108"
+                height="72"
+                loading="lazy"
+                decoding="async"
               />
               <div className="footer-brand-text">
                 <p className="footer-brand-title">ENKOP SAFARIS</p>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import imgFullBleed from '../../assets/images/sutirta-budiman-89IBtfoz3Vw-unsplash.jpg';
+import imgFullBleed from '../../assets/images/sutirta-budiman-89IBtfoz3Vw-unsplash.webp';
 
 export default function FullBleed() {
   const imgRef = useRef(null);

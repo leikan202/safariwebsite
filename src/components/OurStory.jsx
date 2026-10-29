@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import kilimanjaroImg from '../../assets/images/stephan-bechert-xQWelDCacZE-unsplash.jpg';
+import kilimanjaroImg from '../../assets/images/stephan-bechert-xQWelDCacZE-unsplash.webp';
 
 export default function OurStory() {
   const [showFullStory, setShowFullStory] = useState(false);

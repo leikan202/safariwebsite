@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Users, Camera, Zap, Shield, MessageSquare } from 'lucide-react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 import SEO from './SEO';
-import deniceAlexImg from '../../assets/images/denice-alex-rlr0oaz2nZQ-unsplash.jpg';
+import deniceAlexImg from '../../assets/images/denice-alex-rlr0oaz2nZQ-unsplash.webp';
 
 export default function LandCruiserPage() {
   const { openDrawer } = useTripBuilder();

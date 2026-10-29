@@ -66,6 +66,10 @@ export default function Navbar({ onOpenMobileMenu }) {
             src="/enkop-logo-transparent.png" 
             alt="Enkop Safaris" 
             className="nav-logo-img" 
+            width="100"
+            height="66"
+            fetchPriority="high"
+            decoding="async"
           />
         </Link>
 

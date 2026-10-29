@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 import LiquidGlassButton from './LiquidGlassButton';
-import imgConservation from '../../assets/images/ahmed-galal-GMO1Jq3Ajfo-unsplash.jpg';
+import imgConservation from '../../assets/images/ahmed-galal-GMO1Jq3Ajfo-unsplash.webp';
 
 export default function Conservation() {
   const { openDrawer } = useTripBuilder();

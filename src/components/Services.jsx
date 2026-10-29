@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTripBuilder } from '../context/TripBuilderContext';
-import img1 from '../../assets/images/ahmed-galal-VQqMACyNfwA-unsplash.jpg';
-import img2 from '../../assets/images/imani-manyara-BtLnuXPTUns-unsplash.jpg';
-import img3 from '../../assets/images/murad-swaleh-7tDidSXbgD8-unsplash.jpg';
-import img4 from '../../assets/images/giusi-borrasi-XlqCl5NO0SM-unsplash.jpg';
+import img1 from '../../assets/images/ahmed-galal-VQqMACyNfwA-unsplash.webp';
+import img2 from '../../assets/images/imani-manyara-BtLnuXPTUns-unsplash.webp';
+import img3 from '../../assets/images/murad-swaleh-7tDidSXbgD8-unsplash.webp';
+import img4 from '../../assets/images/giusi-borrasi-XlqCl5NO0SM-unsplash.webp';
 
 export default function Services() {
   const { openDrawer } = useTripBuilder();

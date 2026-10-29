@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 const DestinationModal = React.lazy(() => import('./DestinationModal'));
 
-import imgMara from '../../assets/images/leonard-von-bibra-L4-BDd01wmM-unsplash.jpg';
-import imgAmboseli from '../../assets/images/neil-and-zulma-scott-hjv3VO-jpnc-unsplash.jpg';
-import imgNorthernKenya from '../../assets/images/polina-koroleva-36DSACYDey0-unsplash.jpg';
-import imgDiani from '../../assets/images/ezekiel-kilimo-m_06_L3cKY0-unsplash.jpg';
+import imgMara from '../../assets/images/leonard-von-bibra-L4-BDd01wmM-unsplash.webp';
+import imgAmboseli from '../../assets/images/neil-and-zulma-scott-hjv3VO-jpnc-unsplash.webp';
+import imgNorthernKenya from '../../assets/images/polina-koroleva-36DSACYDey0-unsplash.webp';
+import imgDiani from '../../assets/images/ezekiel-kilimo-m_06_L3cKY0-unsplash.webp';
 
 export default function Destinations() {
   const { openDrawer } = useTripBuilder();

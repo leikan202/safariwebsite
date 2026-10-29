@@ -2,7 +2,7 @@ import React from 'react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 import LiquidGlassButton from './LiquidGlassButton';
 import { Phone, Mail } from 'lucide-react';
-import imgContact from '../../assets/images/ahmed-galal-8fH4JwxbAyw-unsplash.jpg';
+import imgContact from '../../assets/images/ahmed-galal-8fH4JwxbAyw-unsplash.webp';
 
 export default function Contact() {
   const { openDrawer } = useTripBuilder();
