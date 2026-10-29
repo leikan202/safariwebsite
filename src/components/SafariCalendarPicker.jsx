@@ -274,7 +274,7 @@ export default function SafariCalendarPicker({
       {/* Status & Summary Banner */}
       <div className="cal-summary-banner" style={{ marginTop: '16px' }}>
         <div className="cal-summary-dates">
-          <CalendarIcon size={16} color="var(--color-secondary)" />
+          <CalendarIcon size={16} color="#D8C3A5" />
           {isFlexible ? (
             <span><strong>Dates:</strong> Flexible / Open Season</span>
           ) : startObj && endObj ? (
@@ -282,7 +282,7 @@ export default function SafariCalendarPicker({
               <strong>{formatDateDisplay(startObj)}</strong> &mdash; <strong>{formatDateDisplay(endObj)}</strong>
             </span>
           ) : startObj ? (
-            <span style={{ color: 'var(--color-secondary)', fontWeight: 600 }}>
+            <span style={{ color: '#D8C3A5', fontWeight: 600 }}>
               &larr; Click any calendar day to set your departure date
             </span>
           ) : (
@@ -292,7 +292,7 @@ export default function SafariCalendarPicker({
 
         {startObj && endObj && (
           <div className="cal-summary-duration">
-            <Clock size={15} color="var(--color-secondary)" />
+            <Clock size={15} color="#D8C3A5" />
             <span><strong>{calculatedNights} Nights</strong> ({calculatedNights + 1} Days)</span>
           </div>
         )}
@@ -307,9 +307,9 @@ export default function SafariCalendarPicker({
               display: 'flex',
               alignItems: 'center',
               gap: '5px',
-              fontFamily: 'var(--font-sans)',
+              fontFamily: "'Montserrat', sans-serif",
               fontSize: '0.78rem',
-              color: 'var(--color-grey)',
+              color: '#D8C3A5',
               cursor: 'pointer',
               textDecoration: 'underline'
             }}

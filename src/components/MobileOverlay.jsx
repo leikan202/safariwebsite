@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { MessageSquare, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useTripBuilder } from '../context/TripBuilderContext';
 
 export default function MobileOverlay({ isOpen, onClose }) {
@@ -58,8 +58,9 @@ export default function MobileOverlay({ isOpen, onClose }) {
   };
 
   return (
-    <div className={`nav-overlay ${isOpen ? 'active' : ''}`}>
+    <div className={`nav-overlay ${isOpen ? 'active' : ''}`} role="dialog" aria-modal="true" aria-label="Mobile Navigation">
       <div className="nav-overlay-inner">
+        {/* Header: Logo and Close Button */}
         <div className="overlay-header">
           <Link
             to="/"
@@ -68,6 +69,7 @@ export default function MobileOverlay({ isOpen, onClose }) {
               e.preventDefault();
               handleLinkClick('');
             }}
+            aria-label="Enkop Safaris Home"
           >
             <img
               src="/enkop-logo-transparent.png"
@@ -76,29 +78,59 @@ export default function MobileOverlay({ isOpen, onClose }) {
             />
           </Link>
           <button className="nav-close" onClick={onClose} aria-label="Close menu">
-            <X size={24} />
+            <X size={24} strokeWidth={1.5} />
           </button>
         </div>
 
-        <nav className="overlay-nav">
-          <a href="/" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick(''); }}>Home</a>
-          <Link to="/itineraries" className="overlay-link" onClick={onClose}>Safaris</Link>
-          <a href="/#destinations" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#destinations'); }}>Destinations</a>
-          <Link to="/4x4-landcruisers" className="overlay-link" onClick={onClose}>4x4 Fleet</Link>
-          <a href="/#our-story" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#our-story'); }}>Our Story</a>
-          <a href="/#why-us" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#why-us'); }}>Why Us</a>
-          <a href="/#contact" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#contact'); }}>Contact</a>
-          <Link to="/faq" className="overlay-link" onClick={onClose}>FAQ</Link>
-        </nav>
+        {/* Navigation Content: Links & CTA Button */}
+        <div className="overlay-main-content">
+          <nav className="overlay-nav">
+            <a href="/" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick(''); }}>Home</a>
+            <a href="/#destinations" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#destinations'); }}>Destinations</a>
+            <Link to="/itineraries" className="overlay-link" onClick={onClose}>Safaris</Link>
+            <Link to="/4x4-landcruisers" className="overlay-link" onClick={onClose}>Experiences</Link>
+            <a href="/#our-story" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#our-story'); }}>About Us</a>
+            <a href="/#contact" className="overlay-link" onClick={(e) => { e.preventDefault(); handleLinkClick('#contact'); }}>Contact</a>
+          </nav>
 
-        <div className="overlay-footer">
-          <p className="overlay-contact-label">GET IN TOUCH</p>
-          <p className="overlay-phone">+254 718 396 228</p>
-          <button className="overlay-wa-btn" onClick={handlePlanClick}>
-            <MessageSquare size={18} />
-            Plan Safari on WhatsApp
+          <div className="overlay-divider"></div>
+
+          <button className="overlay-plan-btn" onClick={handlePlanClick}>
+            <span>Plan Your Trip</span>
+            <span className="overlay-arrow" aria-hidden="true">&rarr;</span>
           </button>
         </div>
+
+        {/* Bottom Artwork: Ostrich Illustration & Geometric Border Trim */}
+        <div className="overlay-bottom-artwork">
+          <div className="overlay-ostrich-wrap" aria-hidden="true">
+            <img
+              src="/enkop-logo-transparent.png"
+              alt=""
+              className="overlay-ostrich-img"
+            />
+          </div>
+          <div className="overlay-geometric-band" aria-hidden="true">
+            <svg
+              className="overlay-motif-svg"
+              viewBox="0 0 480 32"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <pattern id="africanPattern" width="48" height="32" patternUnits="userSpaceOnUse">
+                  <path d="M 0 16 L 24 2 L 48 16 L 24 30 Z" fill="none" stroke="rgba(214, 192, 155, 0.22)" strokeWidth="1" />
+                  <path d="M 12 16 L 24 8 L 36 16 L 24 24 Z" fill="none" stroke="rgba(214, 192, 155, 0.16)" strokeWidth="0.8" />
+                  <circle cx="24" cy="16" r="1.5" fill="rgba(214, 192, 155, 0.35)" />
+                  <line x1="0" y1="2" x2="48" y2="2" stroke="rgba(214, 192, 155, 0.18)" strokeWidth="0.8" />
+                  <line x1="0" y1="30" x2="48" y2="30" stroke="rgba(214, 192, 155, 0.18)" strokeWidth="0.8" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="32" fill="url(#africanPattern)" />
+            </svg>
+          </div>
+        </div>
+
       </div>
     </div>
   );

@@ -123,7 +123,7 @@ export default function TripBuilderDrawer() {
             </p>
           </div>
           <button className="drawer-close" onClick={closeDrawer} aria-label="Close drawer">
-            <X size={26} />
+            <X size={24} />
           </button>
         </div>
 
@@ -134,14 +134,14 @@ export default function TripBuilderDrawer() {
               ==================================================== */}
           {activeStep === 1 && (
             <div className="quiz-step active">
-              <p className="quiz-question" style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '8px' }}>
+              <p className="quiz-question" style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '1.75rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '8px', letterSpacing: '-0.02em' }}>
                 Where would you like to journey?
               </p>
-              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.9rem', color: '#555', marginBottom: '24px' }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.88rem', color: 'rgba(240, 237, 230, 0.75)', marginBottom: '24px', lineHeight: 1.5 }}>
                 Choose your destination country or region from the options below:
               </p>
 
-              <label style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--color-grey)', marginBottom: '10px' }}>
+              <label style={{ display: 'block', fontFamily: "'Montserrat', sans-serif", fontSize: '0.74rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em', color: '#D8C3A5', marginBottom: '10px' }}>
                 Destination Region
               </label>
 
@@ -152,13 +152,15 @@ export default function TripBuilderDrawer() {
                   style={{
                     padding: '18px 20px',
                     borderRadius: '18px',
-                    border: dropdownOpen ? '2px solid var(--color-primary)' : '1.5px solid rgba(216, 195, 165, 0.65)',
-                    backgroundColor: '#ffffff',
+                    border: dropdownOpen ? '1.5px solid #D8C3A5' : '1.5px solid rgba(216, 195, 165, 0.3)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
+                    backdropFilter: 'blur(12px)',
+                    WebkitBackdropFilter: 'blur(12px)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     cursor: 'pointer',
-                    boxShadow: dropdownOpen ? '0 8px 30px rgba(31, 58, 50, 0.12)' : '0 4px 18px rgba(31, 58, 50, 0.04)',
+                    boxShadow: dropdownOpen ? '0 12px 32px rgba(0, 0, 0, 0.35)' : '0 4px 18px rgba(0, 0, 0, 0.15)',
                     transition: 'all 0.25s ease'
                   }}
                 >
@@ -167,8 +169,8 @@ export default function TripBuilderDrawer() {
                       width: '44px',
                       height: '44px',
                       borderRadius: '12px',
-                      backgroundColor: 'rgba(31, 58, 50, 0.08)',
-                      color: 'var(--color-primary)',
+                      backgroundColor: 'rgba(216, 195, 165, 0.15)',
+                      color: '#D8C3A5',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -177,10 +179,10 @@ export default function TripBuilderDrawer() {
                       <Compass size={22} />
                     </div>
                     <div>
-                      <span style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: '1.1rem', fontWeight: 700, color: 'var(--color-primary)', lineHeight: 1.2 }}>
+                      <span style={{ display: 'block', fontFamily: "'Montserrat', sans-serif", fontSize: '1.05rem', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.2 }}>
                         {selectedCountryObj.label}
                       </span>
-                      <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.82rem', color: 'var(--color-grey)', marginTop: '2px', display: 'block' }}>
+                      <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.8rem', color: 'rgba(240, 237, 230, 0.7)', marginTop: '3px', display: 'block' }}>
                         {selectedCountryObj.desc}
                       </span>
                     </div>
@@ -190,11 +192,11 @@ export default function TripBuilderDrawer() {
                     width: '32px',
                     height: '32px',
                     borderRadius: '50%',
-                    backgroundColor: 'rgba(216, 195, 165, 0.25)',
+                    backgroundColor: 'rgba(216, 195, 165, 0.15)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'var(--color-primary)',
+                    color: '#D8C3A5',
                     transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                     transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                   }}>
@@ -210,10 +212,10 @@ export default function TripBuilderDrawer() {
                       top: 'calc(100% + 8px)',
                       left: 0,
                       right: 0,
-                      backgroundColor: '#ffffff',
+                      backgroundColor: '#132720',
                       borderRadius: '18px',
-                      border: '1.5px solid rgba(216, 195, 165, 0.55)',
-                      boxShadow: '0 16px 48px rgba(31, 58, 50, 0.16)',
+                      border: '1.5px solid rgba(216, 195, 165, 0.35)',
+                      boxShadow: '0 16px 48px rgba(0, 0, 0, 0.5)',
                       zIndex: 50,
                       overflow: 'hidden'
                     }}
@@ -233,15 +235,15 @@ export default function TripBuilderDrawer() {
                             alignItems: 'center',
                             justifyContent: 'space-between',
                             cursor: 'pointer',
-                            backgroundColor: isSelected ? 'rgba(31, 58, 50, 0.05)' : '#ffffff',
-                            borderBottom: '1px solid rgba(216, 195, 165, 0.2)',
+                            backgroundColor: isSelected ? 'rgba(216, 195, 165, 0.15)' : 'transparent',
+                            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
                             transition: 'background-color 0.15s ease'
                           }}
                           onMouseEnter={(e) => {
-                            if (!isSelected) e.currentTarget.style.backgroundColor = 'rgba(216, 195, 165, 0.14)';
+                            if (!isSelected) e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
                           }}
                           onMouseLeave={(e) => {
-                            if (!isSelected) e.currentTarget.style.backgroundColor = '#ffffff';
+                            if (!isSelected) e.currentTarget.style.backgroundColor = 'transparent';
                           }}
                         >
                           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
@@ -249,8 +251,8 @@ export default function TripBuilderDrawer() {
                               width: '36px',
                               height: '36px',
                               borderRadius: '10px',
-                              backgroundColor: isSelected ? 'var(--color-primary)' : 'rgba(216, 195, 165, 0.25)',
-                              color: isSelected ? '#ffffff' : 'var(--color-primary)',
+                              backgroundColor: isSelected ? '#D8C3A5' : 'rgba(216, 195, 165, 0.15)',
+                              color: isSelected ? '#152B24' : '#D8C3A5',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
@@ -259,16 +261,16 @@ export default function TripBuilderDrawer() {
                               <MapPin size={16} />
                             </div>
                             <div>
-                              <strong style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: '0.96rem', color: 'var(--color-primary)' }}>
+                              <strong style={{ display: 'block', fontFamily: "'Montserrat', sans-serif", fontSize: '0.94rem', fontWeight: 600, color: '#FFFFFF' }}>
                                 {c.label}
                               </strong>
-                              <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.8rem', color: 'var(--color-grey)' }}>
+                              <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.78rem', color: 'rgba(240, 237, 230, 0.65)' }}>
                                 {c.desc}
                               </span>
                             </div>
                           </div>
                           {isSelected && (
-                            <div style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center' }}>
+                            <div style={{ color: '#D8C3A5', display: 'flex', alignItems: 'center' }}>
                               <Check size={18} />
                             </div>
                           )}
@@ -283,12 +285,12 @@ export default function TripBuilderDrawer() {
               <div style={{
                 padding: '16px 20px',
                 borderRadius: '14px',
-                backgroundColor: 'rgba(216, 195, 165, 0.18)',
-                border: '1px solid rgba(216, 195, 165, 0.4)',
+                backgroundColor: 'rgba(216, 195, 165, 0.08)',
+                border: '1px solid rgba(216, 195, 165, 0.22)',
                 marginBottom: '28px'
               }}>
-                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.84rem', color: 'var(--color-primary)', margin: 0, lineHeight: 1.55 }}>
-                  🌿 <strong>Good by Nature:</strong> Every itinerary is privately curated by licensed Kenyan driver-guides with private 4x4 vehicles, boutique wilderness stays, and flexible pace.
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.84rem', color: '#F0EDE6', margin: 0, lineHeight: 1.55 }}>
+                  🌿 <strong style={{ color: '#D8C3A5' }}>Good by Nature:</strong> Every itinerary is privately curated by licensed Kenyan driver-guides with private 4x4 vehicles, boutique wilderness stays, and flexible pace.
                 </p>
               </div>
 
@@ -310,10 +312,10 @@ export default function TripBuilderDrawer() {
               ==================================================== */}
           {activeStep === 2 && (
             <div className="quiz-step active">
-              <p className="quiz-question" style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '8px' }}>
+              <p className="quiz-question" style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '1.75rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '8px', letterSpacing: '-0.02em' }}>
                 Destinations in mind
               </p>
-              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.9rem', color: '#555', marginBottom: '18px' }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.88rem', color: 'rgba(240, 237, 230, 0.75)', marginBottom: '18px', lineHeight: 1.5 }}>
                 Select any specific parks, lakes, or reserves you would love to experience:
               </p>
 
@@ -336,7 +338,7 @@ export default function TripBuilderDrawer() {
               </div>
 
               {/* Itinerary Style */}
-              <label style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-grey)', marginBottom: '10px' }}>
+              <label style={{ display: 'block', fontFamily: "'Montserrat', sans-serif", fontSize: '0.74rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em', color: '#D8C3A5', marginBottom: '10px' }}>
                 Preferred Itinerary Feel
               </label>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}>
@@ -350,12 +352,12 @@ export default function TripBuilderDrawer() {
                       style={{
                         padding: '8px 16px',
                         borderRadius: '100px',
-                        border: isSelected ? '1.5px solid var(--color-primary)' : '1px solid rgba(107, 74, 53, 0.2)',
-                        backgroundColor: isSelected ? 'var(--color-primary)' : '#ffffff',
-                        color: isSelected ? '#ffffff' : 'var(--color-primary)',
-                        fontFamily: 'var(--font-sans)',
+                        border: isSelected ? '1.5px solid #D8C3A5' : '1px solid rgba(216, 195, 165, 0.25)',
+                        backgroundColor: isSelected ? '#D8C3A5' : 'rgba(255, 255, 255, 0.08)',
+                        color: isSelected ? '#152B24' : '#F0EDE6',
+                        fontFamily: "'Montserrat', sans-serif",
                         fontSize: '0.82rem',
-                        fontWeight: 500,
+                        fontWeight: isSelected ? 700 : 500,
                         cursor: 'pointer',
                         transition: 'all 0.2s ease'
                       }}
@@ -387,10 +389,10 @@ export default function TripBuilderDrawer() {
               ==================================================== */}
           {activeStep === 3 && (
             <div className="quiz-step active">
-              <p className="quiz-question" style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '8px' }}>
+              <p className="quiz-question" style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '1.75rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '8px', letterSpacing: '-0.02em' }}>
                 When would you like to visit?
               </p>
-              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.9rem', color: '#555', marginBottom: '16px' }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.88rem', color: 'rgba(240, 237, 230, 0.75)', marginBottom: '16px', lineHeight: 1.5 }}>
                 Pick your travel dates below, or select flexible dates to explore seasonal migration timings.
               </p>
 
@@ -424,15 +426,15 @@ export default function TripBuilderDrawer() {
               ==================================================== */}
           {activeStep === 4 && (
             <div className="quiz-step active">
-              <p className="quiz-question" style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '8px' }}>
+              <p className="quiz-question" style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '1.75rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '8px', letterSpacing: '-0.02em' }}>
                 Your custom requests
               </p>
-              <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.9rem', color: '#555', marginBottom: '20px' }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.88rem', color: 'rgba(240, 237, 230, 0.75)', marginBottom: '20px', lineHeight: 1.5 }}>
                 Tell us anything you’d like to personalize your journey with Enkop Safaris:
               </p>
 
               {/* Party / Group Size */}
-              <label style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-grey)', marginBottom: '8px' }}>
+              <label style={{ display: 'block', fontFamily: "'Montserrat', sans-serif", fontSize: '0.74rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em', color: '#D8C3A5', marginBottom: '8px' }}>
                 Traveling Party
               </label>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', marginBottom: '18px' }}>
@@ -446,12 +448,12 @@ export default function TripBuilderDrawer() {
                       style={{
                         padding: '10px 14px',
                         borderRadius: '12px',
-                        border: isSelected ? '1.5px solid var(--color-primary)' : '1px solid rgba(107, 74, 53, 0.2)',
-                        backgroundColor: isSelected ? 'var(--color-primary)' : '#ffffff',
-                        color: isSelected ? '#ffffff' : 'var(--color-primary)',
-                        fontFamily: 'var(--font-sans)',
+                        border: isSelected ? '1.5px solid #D8C3A5' : '1px solid rgba(216, 195, 165, 0.25)',
+                        backgroundColor: isSelected ? '#D8C3A5' : 'rgba(255, 255, 255, 0.08)',
+                        color: isSelected ? '#152B24' : '#FFFFFF',
+                        fontFamily: "'Montserrat', sans-serif",
                         fontSize: '0.85rem',
-                        fontWeight: 600,
+                        fontWeight: isSelected ? 700 : 500,
                         cursor: 'pointer',
                         transition: 'all 0.2s ease',
                         textAlign: 'center'
@@ -464,7 +466,7 @@ export default function TripBuilderDrawer() {
               </div>
 
               {/* Preferred Accommodation */}
-              <label style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-grey)', marginBottom: '8px' }}>
+              <label style={{ display: 'block', fontFamily: "'Montserrat', sans-serif", fontSize: '0.74rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em', color: '#D8C3A5', marginBottom: '8px' }}>
                 Preferred Accommodation Style
               </label>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', marginBottom: '20px' }}>
@@ -478,12 +480,12 @@ export default function TripBuilderDrawer() {
                       style={{
                         padding: '10px 12px',
                         borderRadius: '12px',
-                        border: isSelected ? '1.5px solid var(--color-primary)' : '1px solid rgba(107, 74, 53, 0.2)',
-                        backgroundColor: isSelected ? 'rgba(31, 58, 50, 0.05)' : '#ffffff',
-                        color: 'var(--color-primary)',
-                        fontFamily: 'var(--font-sans)',
+                        border: isSelected ? '1.5px solid #D8C3A5' : '1px solid rgba(216, 195, 165, 0.2)',
+                        backgroundColor: isSelected ? 'rgba(216, 195, 165, 0.2)' : 'rgba(255, 255, 255, 0.06)',
+                        color: '#FFFFFF',
+                        fontFamily: "'Montserrat', sans-serif",
                         fontSize: '0.8rem',
-                        fontWeight: isSelected ? 600 : 500,
+                        fontWeight: isSelected ? 700 : 500,
                         cursor: 'pointer',
                         transition: 'all 0.2s ease',
                         textAlign: 'left'
@@ -496,7 +498,7 @@ export default function TripBuilderDrawer() {
               </div>
 
               {/* Custom Request Textarea */}
-              <label style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-grey)', marginBottom: '8px' }}>
+              <label style={{ display: 'block', fontFamily: "'Montserrat', sans-serif", fontSize: '0.74rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.14em', color: '#D8C3A5', marginBottom: '8px' }}>
                 Tell us anything you have in mind
               </label>
               <textarea
@@ -509,30 +511,30 @@ export default function TripBuilderDrawer() {
                   width: '100%',
                   padding: '14px 16px',
                   borderRadius: '14px',
-                  border: '1.5px solid rgba(107, 74, 53, 0.25)',
-                  fontFamily: 'var(--font-sans)',
+                  border: '1.5px solid rgba(216, 195, 165, 0.3)',
+                  fontFamily: "'Montserrat', sans-serif",
                   fontSize: '0.9rem',
                   lineHeight: '1.6',
-                  color: 'var(--color-primary)',
+                  color: '#FFFFFF',
                   resize: 'vertical',
                   marginBottom: '16px',
-                  backgroundColor: '#ffffff'
+                  backgroundColor: 'rgba(0, 0, 0, 0.25)'
                 }}
               />
 
               {/* Inquiry Summary Preview Badge */}
               <div style={{
                 padding: '14px 18px',
-                backgroundColor: 'rgba(216, 195, 165, 0.2)',
+                backgroundColor: 'rgba(216, 195, 165, 0.1)',
                 borderRadius: '14px',
-                border: '1px solid rgba(216, 195, 165, 0.45)',
+                border: '1px solid rgba(216, 195, 165, 0.25)',
                 marginBottom: '24px'
               }}>
-                <span style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: '0.72rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-secondary)', marginBottom: '4px' }}>
+                <span style={{ display: 'block', fontFamily: "'Montserrat', sans-serif", fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#D8C3A5', marginBottom: '4px' }}>
                   Trip Summary
                 </span>
-                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.85rem', color: 'var(--color-primary)', margin: 0, lineHeight: 1.5 }}>
-                  <strong>{quizData.country || 'Kenya'}</strong> &middot;{' '}
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '0.85rem', color: '#F0EDE6', margin: 0, lineHeight: 1.5 }}>
+                  <strong style={{ color: '#FFFFFF' }}>{quizData.country || 'Kenya'}</strong> &middot;{' '}
                   {Array.isArray(quizData.selectedPlaces) && quizData.selectedPlaces.length > 0 ? quizData.selectedPlaces.join(', ') : 'Custom Route'} &middot;{' '}
                   {quizData.startDate && quizData.endDate ? `${quizData.startDate} to ${quizData.endDate}` : 'Flexible Dates'}
                 </p>
@@ -553,7 +555,10 @@ export default function TripBuilderDrawer() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '10px',
-                    backgroundColor: 'var(--color-secondary)'
+                    backgroundColor: '#D8C3A5',
+                    color: '#152B24',
+                    fontFamily: "'Montserrat', sans-serif",
+                    fontWeight: 700
                   }}
                   onClick={submitToWhatsapp}
                 >
