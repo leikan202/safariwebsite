@@ -43,7 +43,7 @@ export default function Destinations() {
             key={dest.id}
             onClick={() => setActiveModal(dest.id)}
           >
-            <img src={dest.image} loading="lazy" decoding="async" alt={dest.name} />
+            <img src={dest.image} loading="lazy" decoding="async" alt={dest.name} width="745" height="496" />
             <div className="dest-label">
               <span className="dest-name">{dest.name}</span>
               <span className="dest-action">Explore &rarr;</span>

@@ -63,7 +63,7 @@ export default function Navbar({ onOpenMobileMenu }) {
           onClick={(e) => handleNavClick(e, '')}
         >
           <img 
-            src="/enkop-logo-transparent.png" 
+            src="/enkop-logo-transparent.webp" 
             alt="Enkop Safaris" 
             className="nav-logo-img" 
             width="100"

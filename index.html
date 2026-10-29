@@ -30,8 +30,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Preload Critical LCP Assets: Brand Logo -->
-  <link rel="preload" as="image" href="/enkop-logo-transparent.png" fetchpriority="high">
+  <!-- Preload Critical LCP Assets: Brand Logo & Hero Banner -->
+  <link rel="preload" as="image" href="/enkop-logo-transparent.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/hero-safari.webp" type="image/webp" fetchpriority="high">
 
   <!-- Google Fonts: Asynchronous Non-Render-Blocking Font Loading -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -57,13 +58,16 @@
   <meta name="twitter:description" content="Book direct with licensed Kenyan driver-guides. 100% custom itineraries, no middleman markups.">
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
 
-  <!-- Google Analytics Snippet: Deferred to idle/load to protect FCP, LCP & TBT -->
+  <!-- Google Analytics Snippet: Triggered on user interaction to avoid delaying critical paint -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     function initAnalytics() {
       if (window._gaInitialized) return;
       window._gaInitialized = true;
+      ['pointerdown', 'touchstart', 'scroll', 'keydown', 'click'].forEach(function(e) {
+        window.removeEventListener(e, initAnalytics, { passive: true });
+      });
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SAFARIDIRECT';
@@ -71,15 +75,10 @@
       gtag('js', new Date());
       gtag('config', 'G-SAFARIDIRECT');
     }
-    if (typeof requestIdleCallback === 'function') {
-      window.addEventListener('load', function() {
-        requestIdleCallback(initAnalytics, { timeout: 2500 });
-      });
-    } else {
-      window.addEventListener('load', function() {
-        setTimeout(initAnalytics, 1500);
-      });
-    }
+    ['pointerdown', 'touchstart', 'scroll', 'keydown', 'click'].forEach(function(e) {
+      window.addEventListener(e, initAnalytics, { passive: true, once: true });
+    });
+    setTimeout(initAnalytics, 6000);
   </script>
 
   <!-- LocalBusiness / TravelAgency JSON-LD Structured Data Schema -->
@@ -249,7 +248,43 @@
   </script>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <header class="navbar">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="Enkop Safaris Home">
+          <img src="/enkop-logo-transparent.webp" alt="Enkop Safaris" class="nav-logo-img" width="100" height="66" fetchpriority="high" decoding="async">
+        </a>
+        <nav class="nav-links">
+          <a href="/" class="active">Home</a>
+          <a href="/itineraries">Safaris</a>
+          <a href="/#destinations">Destinations</a>
+          <a href="/4x4-landcruisers">4x4 Fleet</a>
+          <a href="/#our-story">Our Story</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <div class="nav-right">
+          <button class="nav-enquire-btn">Plan Safari</button>
+          <button class="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="hero" id="hero">
+      <img class="hero-video" src="/hero-safari.webp" alt="Kenyan Safari Sunrise" fetchpriority="high" decoding="async" width="820" height="540">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Kenya &middot; East Africa</p>
+        <h1 class="hero-title">Bespoke<br>Kenyan Safaris</h1>
+      </div>
+      <a href="#destinations" class="hero-scroll-cta" aria-label="Explore destinations">
+        <span>Explore</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+      </a>
+    </section>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

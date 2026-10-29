@@ -50,7 +50,7 @@ export default function Footer() {
             {/* Left: Ostrich Logo & Name */}
             <div className="footer-brand">
               <img 
-                src="/enkop-logo-transparent.png" 
+                src="/enkop-logo-transparent.webp" 
                 alt="Enkop Safaris" 
                 className="footer-brand-logo" 
                 width="108"

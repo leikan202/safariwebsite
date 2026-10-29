@@ -18,6 +18,8 @@ export default function OurStory() {
             className="enkop-story-img"
             loading="lazy"
             decoding="async"
+            width="721"
+            height="481"
           />
           <div className="enkop-story-mask" />
         </div>

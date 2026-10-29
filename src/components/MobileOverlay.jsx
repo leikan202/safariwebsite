@@ -72,7 +72,7 @@ export default function MobileOverlay({ isOpen, onClose }) {
             aria-label="Enkop Safaris Home"
           >
             <img
-              src="/enkop-logo-transparent.png"
+              src="/enkop-logo-transparent.webp"
               alt="Enkop Safaris"
               className="overlay-logo-img"
               width="100"
@@ -109,7 +109,7 @@ export default function MobileOverlay({ isOpen, onClose }) {
         <div className="overlay-bottom-artwork">
           <div className="overlay-ostrich-wrap" aria-hidden="true">
             <img
-              src="/enkop-logo-transparent.png"
+              src="/enkop-logo-transparent.webp"
               alt=""
               className="overlay-ostrich-img"
               width="120"
