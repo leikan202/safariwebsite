@@ -6,12 +6,12 @@ export default function Hero() {
     <section className="hero" id="hero">
       <img
         className="hero-video"
-        src="/hero-safari.webp"
-        alt="Kenyan Safari Sunrise"
+        src="/hero-safari.jpg"
+        alt="Lioness resting in Kenyan savanna wilderness"
         fetchPriority="high"
         decoding="async"
-        width="1440"
-        height="1080"
+        width="3200"
+        height="2133"
       />
       <div className="hero-overlay"></div>
 
